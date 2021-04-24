@@ -17,6 +17,7 @@ let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
 
 function defaultBtnActive(){
         defaultBtn.click();
+        console.log(defaultBtn);
       }
 defaultBtn.addEventListener("change", function(){
         const file = this.files[0];

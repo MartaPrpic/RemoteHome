@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+@extends('master')
+@section("content")
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -92,7 +94,7 @@
             <h1>Accommodation for Digital Nomads in Croatia</h1>
 
         </div>
-    </div>
+    </div>-->
 
     <section class="mapa">
         <h2> Search cities directly from the map</h2>
@@ -271,3 +273,4 @@
 </body>
 
 </html>
+@endsection

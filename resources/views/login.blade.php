@@ -1,6 +1,6 @@
 @extends('master')
 @section("content")
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body>-->
     <div class="container">
         <div class="label">
             <a href="index.html"><img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; "></a>
@@ -48,6 +48,7 @@
     </div>
 
 
-</body>
+<!--</body>
 
-</html>
+</html>-->
+@endsection

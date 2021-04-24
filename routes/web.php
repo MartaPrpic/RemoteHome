@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ListingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,8 @@ Route::get('/logout', function () {
     return redirect('login');
 });
 Route::view('/register', 'register');
-Route::view('/listproperty', 'listproperty');
+Route::view('/list', 'list');
 Route::post("/login", [UserController::class, 'login']);
 Route::post("/register", [UserController::class, 'register']);
 Route::get("/", [ProductController::class, 'index']);
+Route::post("/list", [ListingsController::class, 'list']);

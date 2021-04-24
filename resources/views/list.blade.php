@@ -1,25 +1,7 @@
 @extends('master')
 @section("content")
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oglas</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script defer src="js/app.js"></script>
-</head>
-
-<body>
-
-    <div class="oglas-nav">
+    <!--<div class="oglas-nav">
         <nav class="navbar navbar-expand-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -33,7 +15,7 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </div>-->
 
     <section class="oglas">
         <div class="container">
@@ -41,7 +23,8 @@
 
             <div class="row oglas-okvir">
                 <div class="col-md-6">
-                    <form method="" action="" enctype="multipart/form-data" id="listproperty">
+                    <form method="POST" action="list" enctype="multipart/form-data" id="list">
+                    @csrf
                         <div class="oglas-basic">
                             <select id="category" name="category" class="custom-select">
                               <option selected>Category</option>
@@ -52,18 +35,18 @@
                             </select>
                             <select id="type" name="type" class="custom-select" style="display:none">
                                 <option selected>Type</option>
-                                <option value="Shared property">Room</option>
-                                <option value="Flat">Boat</option>
-                                <option value="Rustic">Co-living</option>
+                                <option value="Room">Room</option>
+                                <option value="Boat">Boat</option>
+                                <option value="Co-living">Co-living</option>
                             </select>
                         </div>
                         <div class="oglas-basic">
-                            <input type="text" class="form-control" placeholder="Title">
-                            <input type="text" class="form-control" placeholder="City">
-                            <input type="text" class="form-control" placeholder="Price">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Title">
+                            <input type="text" name="address" id="address" class="form-control" placeholder="City">
+                            <input type="text" name="price" id="price" class="form-control" placeholder="Price">
                         </div>
                         <div class="oglas-basic">
-                            <div class="imageupload-container">
+                            <!--<div class="imageupload-container">
                                 <div class="imageupload-wrapper">
                                     <div class="imageupload" hidden>
                                         <img src="" alt="">
@@ -77,43 +60,43 @@
                                 
                                 <input id="default-btn" type="file" multiple hidden>
                                 <button onclick="defaultBtnActive()" class="btn btn-info" id="custom-btn">Choose files</button>
+                            </div>-->
+                            <div class="custom-file">
+                            <div class="form-group" style="text-align: left;">
+                                <label for="images">Upload photos:</label>
+                                <input type="file" name="images" id="images" multiple/>
                             </div>
-                            <!--<div class="custom-file">
-                                <input type="file" name="image" class="custom-file-input" id="customFile" multiple>
-                                <label class="custom-file-label" for="customFile">Import images here</label>
-                                <button type="button" class="btn btn-info">Upload</button>
-                                </div>-->
                             <div class="form-group" style="text-align: left;">
                                 <label for="comment">Write description:</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                <textarea class="form-control" name="description" id="description" rows="5" id="comment"></textarea>
                             </div>
                         </div>
 
                         <div class="oglas-basic">
                             <h6>Basic information:</h6>
-                            <select name="cars" class="custom-select">
+                            <select name="condition" id="condition" class="custom-select">
                                 <option selected>Condition</option>
-                                <option value="Ground">New</option>
-                                <option value="Middle">Good condition</option>
-                                <option value="Middle">Outdated</option>
+                                <option value="New">New</option>
+                                <option value="Good">Good condition</option>
+                                <option value="Outdated">Outdated</option>
                             </select>
-                            <select name="cars" class="custom-select" >
+                            <select name="bedrooms" id="bedrooms" class="custom-select" >
                                 <option selected>Bedrooms</option>
                                 <option value="0">T0</option>
                                 <option value="1">T1</option>
                                 <option value="2">T2</option>
                                 <option value="3">T3</option>
                                 <option value="4">T4</option>
-                                <option value="5">T5+</option>
+                                <option value="5+">T5+</option>
                               </select>
-                            <select name="cars" class="custom-select">
+                            <select name="bathrooms" id="bathrooms" class="custom-select">
                                 <option selected>Bathroom number</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
-                                <option value="4">4+</option>
+                                <option value="4+">4+</option>
                               </select>
-                            <select name="cars" class="custom-select">
+                            <select name="floor" id="floor" class="custom-select">
                                 <option selected>Floor</option>
                                 <option value="Basement">Basement</option>
                                 <option value="Semi-basement">Semi-basement</option>
@@ -122,65 +105,66 @@
                                 <option value="Top">Top</option>
                                 <option value="Attic">Attic</option>
                             </select>
-                            <input type="text" class="form-control" placeholder="Inside area size (m2)">
-                            <input type="text" class="form-control" placeholder="Outside area size (m2)">
+                            <input type="text" name="insidesize" id="insidesize" class="form-control" placeholder="Inside area size (m2)">
+                            <input type="text" name="outsidesize" id="outsidesize" class="form-control" placeholder="Outside area size (m2)">
                         </div>
                         <div class="oglas-basic">
                             <h6>Additional information:</h6>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="">Terrace
+                                  <input type="checkbox"  name="additionalinfo[]" class="form-check-input" value="Terrace">Terrace
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="">Lift
+                                    <input type="checkbox" name="additionalinfo[]" class="form-check-input" value="Lift">Lift
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="">Storage room
+                                    <input type="checkbox"name="additionalinfo[]"  class="form-check-input" value="Storage room">Storage room
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="">Air conditioning
+                                    <input type="checkbox"name="additionalinfo[]"  class="form-check-input" value="Air conditioning">Air conditioning
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="">Backyard
+                                  <input type="checkbox" name="additionalinfo[]" class="form-check-input" value="Backyard">Backyard
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="">Pool
+                                  <input type="checkbox" name="additionalinfo[]" class="form-check-input" value="Pool">Pool
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="">Parking spot
+                                  <input type="checkbox" name="additionalinfo[]" class="form-check-input" value="Parking spot">Parking spot
                                 </label>
                             </div>
                             <div class="form-check" style="text-align: left;">
                                 <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input" value="">Pet Friendly
+                                  <input type="checkbox" name="additionalinfo[]"  class="form-check-input" value="Pet friendly">Pet Friendly
                                 </label>
                             </div>
 
                         </div>
                         <div class="oglas-basic">
                             <h6>Included in price:</h6>
-                            <button type="button" class="btn btn-outline-info">electricity</button>
-                            <button type="button" class="btn btn-outline-info">TV</button>
-                            <button type="button" class="btn btn-outline-info">wi-fi</button>
-                            <button type="button" class="btn btn-outline-info">water</button>
-                            <button type="button" class="btn btn-outline-info">gas</button>
-                            <button type="button" class="btn btn-outline-info">All</button>
-                            <button type="button" class="btn btn-outline-info">cleaning services</button>
+                            <input type="checkbox" name="expences[]" value="electricity" class="btn btn-outline-info">electricity
+                            <input type="checkbox" name="expences[]" value="TV" class="btn btn-outline-info">TV
+                            <input type="checkbox" name="expences[]" value="wi-fi" class="btn btn-outline-info">wi-fi
+                            <input type="checkbox" name="expences[]" value="water" class="btn btn-outline-info">water
+                            <input type="checkbox" name="expences[]" value="gas" class="btn btn-outline-info">gas
+                            <input type="checkbox" name="expences[]" value="all" class="btn btn-outline-info">All
+                            <input type="checkbox" name="expences[]" value="clening services" class="btn btn-outline-info">cleaning services
+                            <input type="checkbox" name="expences[]" value="excluded" class="btn btn-outline-info">excluded
                         </div>
                         <div class="oglas-post">
-                            <button type="button" class="btn btn-info">List</button>
+                            <button type="submit" class="btn btn-info">List</button>
                         </div>
 
                     </form>
@@ -213,6 +197,4 @@
         </div>
     </section>
 
-</body>
-
-</html>
+@endsection

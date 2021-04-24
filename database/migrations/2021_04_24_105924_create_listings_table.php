@@ -17,19 +17,19 @@ class CreateListingsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('category');
-            $table->string('type');
+            $table->string('type')-> nullable();
             $table->string('price');
             $table->string('address');
-            $table->string('description');
-            $table->array('images');
+            $table->text('description');
+            $table->json('images');
             $table->string('condition');
             $table->string('bedrooms');
             $table->string('bathrooms');
-            $table->string('floor');
+            $table->string('floor')-> nullable();
             $table->string('insidesize');
             $table->string('outsidesize');
-            $table->array('additionalinfo');
-            $table->array('expences');
+            $table->json('additionalinfo')-> nullable();
+            $table->json('expences');
             $table->timestamps();
         });
     }
