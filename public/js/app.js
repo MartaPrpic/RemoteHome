@@ -1842,12 +1842,12 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-/*var category = document.getElementById('category');
+var category = document.getElementById('category');
 category.addEventListener("click", function (e) {
   if (document.getElementById('shared').selected) {
     document.getElementById('type').style.display = "block";
   }
-});*/
+});
 var regije = [{
   ime: "Slavonija and Baranja",
   summerTemp: "30",
