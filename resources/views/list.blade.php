@@ -64,7 +64,7 @@
                             <div class="custom-file">
                             <div class="form-group" style="text-align: left;">
                                 <label for="images">Upload photos:</label>
-                                <input type="file" name="images" id="images" multiple/>
+                                <input type="file" name="images[]" id="images" multiple/>
                             </div>
                             <div class="form-group" style="text-align: left;">
                                 <label for="comment">Write description:</label>

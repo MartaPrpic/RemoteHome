@@ -4,7 +4,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="img/logo.png" alt="Logo" style="width: 75px; height: 60px; padding-left: 20px;">
                 </a>
 
@@ -16,7 +16,7 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="Accommodation.html">Accommodation</a>
+                            <a class="nav-link" href="/accommodation" id="accommodation" >Accommodation</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">

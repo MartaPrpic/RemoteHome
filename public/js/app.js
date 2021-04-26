@@ -1842,48 +1842,207 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var category = document.getElementById('category');
+/*var category = document.getElementById('category');
 category.addEventListener("click", function (e) {
   if (document.getElementById('shared').selected) {
     document.getElementById('type').style.display = "block";
   }
+});*/
+var regije = [{
+  ime: "Slavonija and Baranja",
+  summerTemp: "30",
+  winterTemp: "-2",
+  wind: "very",
+  sun: "middle",
+  areaType: "lowland",
+  population: "middle",
+  description: ["hospitals", "good wifi", "agriculture", "farms", "peacefull living", "city lifestyle", "bicycling", "beautiful parks", "student city"],
+  points: 0
+}, {
+  ime: "Lika and Gorski Kotar",
+  summerTemp: "15",
+  winterTemp: "-10",
+  wind: "not at all",
+  sun: "low",
+  areaType: "mountains",
+  population: "low",
+  description: ["farms", "peacefull living", "climbing", "beautiful nature", "fishing"],
+  points: 0
+}, {
+  ime: "Central part",
+  summerTemp: "25",
+  winterTemp: "0",
+  wind: "middle",
+  sun: "middle",
+  areaType: "lowland and highland",
+  population: "high",
+  description: ["hospitals", "good wifi", "climbing", "historical buildings", "city lifestyle", "beautiful parks", "student city"],
+  points: 0
+}, {
+  ime: "Istra and Kvarner",
+  summerTemp: "30",
+  winterTemp: "5",
+  wind: "not at all",
+  sun: "very",
+  areaType: "lowland and highland",
+  population: "middle",
+  description: ["hospitals", "peacefull living", "good wifi", "fishing", "climbing", "historical buildings", "city lifestyle", "beautiful beaches", "student city"],
+  points: 0
+}, {
+  ime: "Dalmatia",
+  summerTemp: "32",
+  winterTemp: "5",
+  wind: "not at all",
+  sun: "very",
+  areaType: "lowland",
+  population: "middle",
+  description: ["hospitals", "beautiful beaches", "beautiful nature", "good wifi", "agriculture", "historical buildings", "city lifestyle", "peacefull living", "student city"],
+  points: 0
+}, {
+  ime: "Islands",
+  summerTemp: "30",
+  winterTemp: "5",
+  wind: "not at all",
+  sun: "very",
+  areaType: "lowland",
+  population: "low",
+  description: ["beautiful nature", "beautiful beaches", "peacefull living", "fishing", "agriculture"],
+  points: 0
+}];
+var start = document.getElementById("quiz-btn");
+var next = document.getElementById("next");
+var sections = document.getElementById("sections");
+var finish = document.getElementById("finish");
+var buttons = document.getElementById("nav-btns");
+var numOfSections = sections.childElementCount;
+var userInput = {
+  summerTemp: null,
+  winterTemp: null,
+  wind: null,
+  sun: null,
+  areaType: [],
+  population: null,
+  description: []
+};
+var sectionsArray = Array.from(sections.children);
+var currentPage = 0;
+sectionsArray.forEach(function (section) {
+  return section.style.display = "none";
 });
-var wrapper = document.querySelector(".imageupload-wrapper");
-var fileName = document.querySelector(".file-name");
-var defaultBtn = document.querySelector("#default-btn");
-var customBtn = document.querySelector("#custom-btn");
-var cancelBtn = document.querySelector("#cancel-btn i");
-var img = document.querySelector("img");
-var regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+console.log(sections);
+start.addEventListener('click', function (e) {
+  e.preventDefault();
+  sections.firstElementChild.style.display = "block";
+  document.getElementById("question-container").style.display = "block";
+  document.getElementById("hello").style.display = "none";
+  back.style.display = "none";
+  finish.style.display = "none";
+});
+next.addEventListener("click", function (e) {
+  e.preventDefault();
+  back.style.display = "inline";
 
-function defaultBtnActive() {
-  defaultBtn.click();
+  if (currentPage == 2) {
+    next.style.display = "none";
+    finish.style.display = "inline";
+  } else {
+    next.style.display = "inline";
+    finish.style.display = "none";
+  }
+
+  if (sections.children[currentPage].style.display == "block") {
+    sections.children[currentPage].style.display = "none";
+    sections.children[currentPage + 1].style.display = "block";
+  }
+
+  currentPage++;
+});
+back.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (currentPage == 3) {
+    next.style.display = "inline";
+    finish.style.display = "none";
+  }
+
+  if (sections.children[currentPage].style.display == "block") {
+    if (sections.children[1].style.display == "block") {
+      back.style.display = "none";
+    } else {
+      back.style.display = "inline";
+    }
+
+    sections.children[currentPage].style.display = "none";
+    sections.children[currentPage - 1].style.display = "block";
+  }
+
+  currentPage--;
+});
+finish.addEventListener("click", function (e) {
+  e.preventDefault();
+  buttons.style.display = "none";
+  Array.from(document.getElementById("interests").children).forEach(function (check) {
+    if (check.checked) userInput.description.push(check.nextElementSibling.innerHTML);
+  });
+  Array.from(document.getElementsByName("summerTemp")).forEach(function (radio) {
+    if (radio.checked) userInput.summerTemp = radio.nextElementSibling.innerHTML.toString();
+  });
+  Array.from(document.getElementsByName("winterTemp")).forEach(function (radio) {
+    if (radio.checked) userInput.winterTemp = radio.nextElementSibling.innerHTML.toString();
+  });
+  if (document.getElementById("slider1").value == 1) userInput.wind = "middle";else if (document.getElementById("slider1").value == 2) userInput.wind = "very";
+  if (document.getElementById("slider2").value == 1) userInput.sun = "middle";else if (document.getElementById("slider2").value == 2) userInput.sun = "very";
+  Array.from(document.getElementsByName("areaType")).forEach(function (check) {
+    if (check.checked) userInput.areaType.push(check.nextElementSibling.innerHTML);
+  });
+  if (document.getElementById("slider3").value == 0) userInput.population = "low";else if (document.getElementById("slider3").value == 1) userInput.population = "middle";else if (document.getElementById("slider3").value == 2) userInput.population = "very";
+  console.log(userInput);
+
+  var usporedi = function usporedi(userInput, regije) {
+    for (var i = 0; i < regije.length; i++) {
+      for (var j = 0; j < userInput.description.length; j++) {
+        if (regije[i].description.includes(userInput.description[j])) regije[i].points++;
+      }
+
+      for (var k = 0; k < userInput.areaType.length; k++) {
+        if (regije[i].areaType.includes(userInput.areaType[k])) regije[i].points++;
+      }
+
+      if (regije[i].population.includes(userInput.population)) regije[i].points++;
+      if (regije[i].summerTemp.includes(userInput.summerTemp)) regije[i].points++;
+      if (regije[i].winterTemp.includes(userInput.winterTemp)) regije[i].points++;
+      if (regije[i].wind.includes(userInput.wind)) regije[i].points++;
+      if (regije[i].sun.includes(userInput.sun)) regije[i].points++;
+    }
+  };
+
+  usporedi(userInput, regije);
+
+  var getResult = function getResult() {
+    regije.sort(function (regijaA, regijaB) {
+      return regijaB.points - regijaA.points;
+    });
+    var result = [];
+    var maxPoints = regije[0].points;
+    result = regije.filter(function (regija) {
+      return regija.points == maxPoints;
+    });
+    result.forEach(function (regija) {
+      return document.getElementById("result").innerHTML += regija.ime;
+    });
+  };
+
+  getResult();
+});
+var $slider = $("#slider");
+var $fill = $(".bar .fill");
+
+function setBar() {
+  $fill.css("width", $slider.val() + "%");
 }
 
-defaultBtn.addEventListener("change", function () {
-  var file = this.files[0];
-
-  if (file) {
-    var reader = new FileReader();
-
-    reader.onload = function () {
-      var result = reader.result;
-      img.src = result;
-      wrapper.classList.add("active");
-    };
-
-    cancelBtn.addEventListener("click", function () {
-      img.src = "";
-      wrapper.classList.remove("active");
-    });
-    reader.readAsDataURL(file);
-  }
-
-  if (this.value) {
-    var valueStore = this.value.match(regExp);
-    fileName.textContent = valueStore;
-  }
-});
+$slider.on("input", setBar);
+setBar();
 
 /***/ }),
 

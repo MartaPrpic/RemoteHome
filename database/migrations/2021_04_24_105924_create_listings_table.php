@@ -17,7 +17,7 @@ class CreateListingsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('category');
-            $table->string('type')-> nullable();
+            $table->string('type')->nullable();
             $table->string('price');
             $table->string('address');
             $table->text('description');
@@ -25,10 +25,10 @@ class CreateListingsTable extends Migration
             $table->string('condition');
             $table->string('bedrooms');
             $table->string('bathrooms');
-            $table->string('floor')-> nullable();
+            $table->string('floor')->nullable();
             $table->string('insidesize');
             $table->string('outsidesize');
-            $table->json('additionalinfo')-> nullable();
+            $table->json('additionalinfo')->nullable();
             $table->json('expences');
             $table->timestamps();
         });

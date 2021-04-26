@@ -10,6 +10,20 @@ class ListingsController extends Controller
     //
     function list(Request $req)
     {
+        $req->validate([
+            'images.*'=> 'required|mimes:jpg,png,jpeg|max:5048',
+            'name' => 'required'
+        ]); 
+        $i= 0;
+        if($req->hasfile('images')){
+            foreach($req->file('images') as $file){
+                $i++;
+                $newImageName = time() . '-'.  $req->name  . $i . '.' . $file->extension();
+                $file -> move(public_path('images'), $newImageName);
+                $imgData[] = $newImageName;
+            }
+        }
+
         $listing = new Listing;
         $listing->name=$req->name;
         $listing->category=$req->category;
@@ -17,7 +31,7 @@ class ListingsController extends Controller
         $listing->price=$req->price;
         $listing->address=$req->address;
         $listing->description=$req->description;
-        $listing->images=$req->images;
+        $listing->images=json_encode($imgData);
         $listing->condition=$req->condition;
         $listing->bedrooms=$req->bedrooms;
         $listing->bathrooms=$req->bathrooms;
