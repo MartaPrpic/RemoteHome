@@ -89,11 +89,6 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
-
-            <h1>Accommodation for Digital Nomads in Croatia</h1>
-
-        </div>
     </div>-->
 
     <section class="mapa">
