@@ -91,92 +91,50 @@
         </nav>
     </div>-->
 
-    <section class="mapa">
-        <h2> Search cities directly from the map</h2>
-        <div class="container">
-            <div class="row">
-                <div class="md-6 karta"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917793.8170734323!2d14.163380898732584!3d44.424791892250234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133441080add95ed%3A0xa0f3c024e1661b7f!2sCroatia!5e0!3m2!1sen!2shr!4v1618824887273!5m2!1sen!2shr"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-                <div class="md-6 quiz">
-                    <a href="/quiz">
-                        <h3> <i class="fas fa-question-circle"></i> Take a quiz to find out what area suits you best</h3>
-                    </a>
-                </div>
+    <div class="container-fluid px-0 ">
+        <div class="karta">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917793.8170734323!2d14.163380898732584!3d44.424791892250234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133441080add95ed%3A0xa0f3c024e1661b7f!2sCroatia!5e0!3m2!1sen!2shr!4v1619386506925!5m2!1sen!2shr"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
+            <div class="search">
+                <p>
+                    <form class="form-inline" action="/action_page.php">
+                        <input class="search-box mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                </p>
             </div>
         </div>
-    </section>
+        <div class="kviz">
+            <a href="/quiz">
+                <p>
+                    <i class="far fa-lightbulb"></i> Take a quiz to find out what area suits you best</p>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!--novo-->
 
     <section class="categories">
-        <h2> What we offer</h2>
+        <h2> C A T E G O R I E S</h2>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>HOUSES</h3>
-                            </div>
-                            <img src="img/hotel.jpg" alt="house">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>FLATS</h3>
-                            </div>
-                            <img src="img/apartman.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>ROOMS</h3>
-                            </div>
-                            <img src="img/soba.jpg" alt="house">
-                        </div>
-                    </div>
+            <div class="row okvir-cat">
+                <div class="col-md-6 ikone-cat">
+                    <button type="button" class="btn btn-primary"><i class="fas fa-home"></i> <h6>House</h6></button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-building"></i><h6>Flat</h6></button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-bed"></i><h6>Room</h6></button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-users"></i><h6>Co-living</h6></button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-ship"></i><h6>Boat</h6></button>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-tractor"></i><h6>Farm</h6></button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>CO-LIVING</h3>
-                            </div>
-                            <img src="img/coliving.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>BOATS</h3>
-                            </div>
-                            <img src="img/brod.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <div class="layer">
-                                <h3>COTTAGES</h3>
-                            </div>
-                            <img src="img/farma2.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
+
+
+
+    <!--novo-->
 
     <section class="popular">
         <div class="container">
@@ -185,6 +143,9 @@
                 <div class="col-md-4">
                     <div class="kartica">
                         <div class="kartica-img">
+                            <div>
+                                <h6>Flat in Dubrovnik</h6>
+                            </div>
                             <img src="img/hotel1.jpg">
                             <div class="rating">
                                 <i class="fas fa-star"></i>
@@ -195,13 +156,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="opis">
-                        <h5>Flat "Arena" in Pula</h5>
-                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="kartica">
                         <div class="kartica-img">
+                            <div>
+                                <h6>Cottage in Ogulin</h6>
+                            </div>
                             <img src="img/farma2.jpg">
                             <div class="rating">
                                 <i class="fas fa-star"></i>
@@ -212,13 +173,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="opis">
-                        <h5>Cottage "Zelenka" in Sisak</h5>
-                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="kartica">
                         <div class="kartica-img">
+                            <div>
+                                <h6>Room in Osijek</h6>
+                            </div>
                             <img src="img/soba2.jpg">
                             <div class="rating">
                                 <i class="fas fa-star"></i>
@@ -228,9 +189,6 @@
                                 <i class="far fa-star"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="opis">
-                        <h5>Room "Barbara" in Osijek</h5>
                     </div>
                 </div>
             </div>
@@ -242,26 +200,37 @@
     <section class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" style="padding-top: 40px;">
-                    <a href="#">
-                        <p>Privacy Policy</p>
+                <div class="col-md-4 footer-link">
+                    <h6>About Us</h6>
+                    <div>
+                        <a href="#"> Contact
                     </a>
+                    </div>
+                    <div>
+                        <a href="/accommodation">
+                        Accommodation
+                    </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        Privacy Policy
+                    </a>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <p><i class="fas fa-square-full"></i> <i class="fas fa-square-full"></i> <i class="fas fa-square-full"></i></p>
-                    <p>2021</p>
-                </div>
-                <div class="col-md-4" style="padding-top: 40px;">
-                    <a href="">
-                        <a href="#">
-                            <p>Contact</p>
-                        </a>
+                    <a class="footer-logo" href="/">
+                        <img src="img/logo3.png" alt="Logo" style="width: 60px; height: 65px; ">
                     </a>
+                    <p><i class="far fa-copyright" style="font-size: 15px;"></i> 2021 Remote Home</p>
+                </div>
+
+                <div class="col-md-4 ">
+                    <h6>Social media</h6>
+                    <p><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest-square"></i></p>
                 </div>
             </div>
         </div>
     </section>
-
 
 
 
