@@ -30,4 +30,5 @@ Route::view('/accommodation', 'accommodation');
 Route::post("/login", [UserController::class, 'login']);
 Route::post("/register", [UserController::class, 'register']);
 Route::get("/", [ProductController::class, 'index']);
+Route::get("/accommodation", [ListingsController::class, 'show']);
 Route::post("/list", [ListingsController::class, 'list']);

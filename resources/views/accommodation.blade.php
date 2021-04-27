@@ -159,6 +159,24 @@
                         </div>
                     </div>
                 </div>
+                @foreach($listings as $listing)
+                <div class="col-md-3">
+                    <div class="smjestaj-box">
+                        <div class="smjestaj-opis">
+                            <a href="#">
+                                <h5>{{$listing['name']}}</h5>
+                            </a>
+                        </div>
+                        <div class="smjestaj-img">
+                            <div class="infor">
+                                <p>{{$listing['description']}}</p>
+                            </div>
+                            <img src="{{'images/' . head(json_decode($listing['images']))}}" alt="house">
+                        
+                        </div>
+                    </div>
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

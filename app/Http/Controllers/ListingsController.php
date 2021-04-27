@@ -43,4 +43,9 @@ class ListingsController extends Controller
         $listing->save();
         return redirect('/');
     }
+    function show()
+    {
+        $data = Listing::all();
+        return view('accommodation', ['listings'=> $data]);
+    }
 }
