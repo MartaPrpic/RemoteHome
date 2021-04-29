@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Listing;
-
+use App\Models\Favourite;
+use Illuminate\Support\Facades\DB;
+use Session;
 class ListingsController extends Controller
 {
     //
@@ -47,5 +49,37 @@ class ListingsController extends Controller
     {
         $data = Listing::all();
         return view('accommodation', ['listings'=> $data]);
+    }
+
+    function detail($id){
+        $data = Listing::find($id);
+        return view('detail', ['listing'=>$data]);
+    }
+
+    function favourite(Request $req)
+    {
+        if($req->session()->has('user'))
+        {
+            $favourite = new Favourite;
+            $favourite->user_id=$req->session()->get('user')['id'];
+            $favourite->listing_id=$req->listing_id;
+            $favourite->save();
+            return redirect('/');
+        }
+        else
+        {
+            return redirect('/login');
+        }
+    }
+    function favouriteList()
+    {
+        $user_id = Session::get('user')['id'];
+        $favouriteListings = DB::table('favourites')
+            ->join('listings', 'favourites.listing_id', '=', 'listings.id')
+            ->where('favourites.user_id', $user_id)
+            ->select('listings.*')
+            ->get();
+
+            return view('favourites', ['favourites' => $favouriteListings]);
     }
 }

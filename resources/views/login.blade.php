@@ -20,7 +20,7 @@
     <div class="container">
         <div class="label">
             <a href="index.html"><img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; "></a>
-            <h4> Sign up</h4>
+            <h4>Log In</h4>
         </div>
 
         <div class="signin">
@@ -47,7 +47,6 @@
     </div>
 
 
-<!--</body>
+</body>
 
-</html>-->
 @endsection

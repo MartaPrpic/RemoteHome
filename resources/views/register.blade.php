@@ -1,14 +1,13 @@
 @extends('master')
 @section("content")
-<div class="container">
+<body style="background-color: rgb(0, 153, 255);">
+    <div class="container">
         <div class="label">
-            <a href="index.html"><img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; "></a>
+            <img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; ">
             <h4>Register</h4>
         </div>
 
-        <div class="row signin">
-
-            <div class="col-md-6">
+        <div class="signin">
                 <form action="register" method="POST"> 
                     @csrf
                     
@@ -36,4 +35,5 @@
         </div>
     </div>
 </div>
+</body>
 @endsection

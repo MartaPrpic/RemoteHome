@@ -45,7 +45,7 @@
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="">Messages</a>
-                                <a class="dropdown-item" href="">Favourites</a>
+                                <a class="dropdown-item" href="/favourites">Favourites</a>
                                 <a class="dropdown-item" href="">Reservations</a>
                                 <a class="dropdown-item" href="">Personal</a>
                                 <a class="dropdown-item" href="">Settings</a>

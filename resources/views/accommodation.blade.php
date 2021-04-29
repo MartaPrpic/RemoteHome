@@ -1,8 +1,8 @@
 @extends('master')
 @section("content")
-<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+<nav class="navbar navbar-expand-sm sticky-top">
 
-        <div class="container">
+        <div class="container d-flex justify-content-center">
            <!-- <div class="col-md-4" style="text-align: left;">
 
                 <a class="navbar-brand" href="index.html">
@@ -19,7 +19,7 @@
             </form>
 
         </div>
-    </nav>
+</nav>
     <section class="filter">
         <div class="container">
             <div class="row">
@@ -39,169 +39,59 @@
     <section class="smjestaji">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="Room.html">
-                                <h5>Room in Slavonski Brod</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/apartman5.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>House in Umag</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/bazen.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>Flat in Novalja</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/apartman4.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>Boat from Zadar</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/jahta.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>Cottage in Ogulin</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/farma.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>Flat in Zagreb</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/kuca4.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>House in Split</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/bazen2.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>Co-living in Požega</h5>
-                            </a>
-                        </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed commodi debitis voluptas molestiae, consequatur nesciunt asperiores itaque vel.</p>
-                            </div>
-                            <img src="img/dnevni5.jpg" alt="house">
-                        </div>
-                    </div>
-                </div>
                 @foreach($listings as $listing)
-                <div class="col-md-3">
-                    <div class="smjestaj-box">
-                        <div class="smjestaj-opis">
-                            <a href="#">
-                                <h5>{{$listing['name']}}</h5>
+                        <div class="col-md-3" id="{{$listing['id']}}">
+                            <a href="detail/{{$listing['id']}}">
+                                <div class="smjestaj-box">
+                                    <div class="smjestaj-opis">
+                                            <h5>{{$listing['name']}}</h5>
+                                    </div>
+                                    <div class="smjestaj-img">
+                                        <div class="infor">
+                                            <p>{{$listing['description']}}</p>
+                                        </div>
+                                        <img src="{{'images/' . head(json_decode($listing['images']))}}" alt="house">
+                                    </div>
+                                </div>
                             </a>
                         </div>
-                        <div class="smjestaj-img">
-                            <div class="infor">
-                                <p>{{$listing['description']}}</p>
-                            </div>
-                            <img src="{{'images/' . head(json_decode($listing['images']))}}" alt="house">
-                        
-                        </div>
-                    </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
-
     <section class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" style="padding-top: 40px;">
-                    <a href="#">
-                        <p>Privacy Policy</p>
+                <div class="col-md-4 footer-link">
+                    <h6>About Us</h6>
+                    <div>
+                        <a href="#"> Contact
                     </a>
+                    </div>
+                    <div>
+                        <a href="/accommodation">
+                        Accommodation
+                    </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                        Privacy Policy
+                    </a>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <p><i class="fas fa-square-full"></i> <i class="fas fa-square-full"></i> <i class="fas fa-square-full"></i></p>
-                    <p>2021</p>
-                </div>
-                <div class="col-md-4" style="padding-top: 40px;">
-                    <a href="">
-                        <a href="#">
-                            <p>Contact</p>
-                        </a>
+                    <a class="footer-logo" href="/">
+                        <img src="img/logo3.png" alt="Logo" style="width: 60px; height: 65px; ">
                     </a>
+                    <p><i class="far fa-copyright" style="font-size: 15px;"></i> 2021 Remote Home</p>
+                </div>
+
+                <div class="col-md-4 ">
+                    <h6>Social media</h6>
+                    <p><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest-square"></i></p>
                 </div>
             </div>
-
         </div>
     </section>
+
 @endsection

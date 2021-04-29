@@ -32,3 +32,6 @@ Route::post("/register", [UserController::class, 'register']);
 Route::get("/", [ProductController::class, 'index']);
 Route::get("/accommodation", [ListingsController::class, 'show']);
 Route::post("/list", [ListingsController::class, 'list']);
+Route::get("detail/{id}", [ListingsController::class, 'detail']);
+Route::post("/favourite", [ListingsController::class, 'favourite']);
+Route::get("/favourites", [ListingsController::class, 'favouriteList']);
