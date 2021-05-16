@@ -1,78 +1,52 @@
-<!--<div class="header">-->
+<div class="header">
+    <nav class="navbar navbar-expand-sm sticky-top">
+        <!--promjenila u container-fluid-->
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="/">
+                <!--makla style komponentu iz img jer sam je prebacila u css-->
+                <!--u svaki li dodala nav-element klasu-->
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <nav class="navbar navbar-expand-sm sticky-top">
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
 
-            <div class="container">
-
-                <a class="navbar-brand" href="/">
-                    <img src="img/logo.png" alt="Logo" style="width: 75px; height: 60px; padding-left: 20px;">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active nav-element">
+                        <a class="nav-link" href="/accommodation">Accommodation</a>
+                    </li>
+                    <li class="nav-item dropdown nav-element">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  Currency
                 </a>
-
-                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                <div class="collapse navbar-collapse " id="collapsibleNavbar">
-
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/accommodation" id="accommodation" >Accommodation</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                      Language
-                    </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Croatian <img src="img/hrv.png" style="width: 15px; height: 15px;"></a>
-                                <a class="dropdown-item" href="#">English  <img src="img/eng.png" style="width: 15px; height: 15px;"></a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                      Currency
-                    </a>
-                        <li>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">EURO <i class="fas fa-euro-sign"></i></a>
-                                <a class="dropdown-item" href="#">USD <i class="fas fa-dollar-sign"></i></a>
-                                <a class="dropdown-item" href="#">HRK</a>
-                            </div>
-                        </li>
+                        <div id="currency" class="dropdown-menu">
+                            <a class="dropdown-item" href="#">EURO <i class="fas fa-euro-sign"></i></a>
+                            <a class="dropdown-item" href="#">USD <i class="fas fa-dollar-sign"></i></a>
+                            <a class="dropdown-item" href="#">HRK</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown nav-element">
+                        <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i>
+                        </a>
+                        <!--dodala dropdown-menu-right komponentu-->
                         @if(Session::has('user'))
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle btn-secondary btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
-                                <i class="fas fa-user-circle"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="">Messages</a>
+                        <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="/favourites">Favourites</a>
-                                <a class="dropdown-item" href="">Reservations</a>
-                                <a class="dropdown-item" href="">Personal</a>
-                                <a class="dropdown-item" href="">Settings</a>
-                                <a class="dropdown-item" href="">Contact</a>
-                                <a class="dropdown-item" href="">Privacy Policy</a>
-                                <a class="dropdown-item" href="/logout">Log out</a>
                                 <a class="dropdown-item" href="/list">Host your property</a>
-                            </div>
-                        </li>
+                                <a class="dropdown-item" href="/logout">Log out</a>
+                        </div>
                         @else
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle btn-secondary btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
-                                <i class="fas fa-user-circle"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="/login">Login</a>
-                                <a class="dropdown-item" href="/register">Register</a>
-                            </div>
-                        </li>
+                        <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/login">Login</a>
+                            <a class="dropdown-item" href="/register">Sign up</a>
+                        </div>
                         @endif
-                    </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <!--<div class="container">
-
-            <h1>Accommodation for Digital Nomads in Croatia</h1>
-
         </div>
-</div>-->
+    </nav>
+</div>

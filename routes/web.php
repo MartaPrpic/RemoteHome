@@ -35,3 +35,6 @@ Route::post("/list", [ListingsController::class, 'list']);
 Route::get("detail/{id}", [ListingsController::class, 'detail']);
 Route::post("/favourite", [ListingsController::class, 'favourite']);
 Route::get("/favourites", [ListingsController::class, 'favouriteList']);
+Route::get("/removefav/{id}", [ListingsController::class, 'removeFav']);
+Route::get("/unheart/{id}", [ListingsController::class, 'unHeart']);
+Route::get("/", [ListingsController::class, 'getAddress']);

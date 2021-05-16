@@ -1843,11 +1843,49 @@ module.exports = {
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 var category = document.getElementById('category');
-category.addEventListener("click", function (e) {
-  if (document.getElementById('shared').selected) {
-    document.getElementById('type').style.display = "block";
-  }
-});
+
+if (category) {
+  category.addEventListener("click", function (e) {
+    if (document.getElementById('shared').selected) {
+      document.getElementById('type').style.display = "block";
+    }
+  });
+}
+
+var categories = document.getElementById('categories');
+
+if (categories) {
+  var funkcija = function funkcija() {
+    oglasi.forEach(function (oglas) {
+      return oglas.style.display = "block";
+    });
+    var dinamicList = [];
+    categoryCheck.forEach(function (check) {
+      console.log(check.checked);
+
+      if (check.checked == true) {
+        oglasi.forEach(function (oglas) {
+          console.log(oglas.id, check.value);
+          oglas.style.display = "none";
+
+          if (oglas.id == check.value | oglas.firstElementChild.id == check.value) {
+            dinamicList.push(oglas);
+          }
+        });
+      }
+    });
+    dinamicList.forEach(function (match) {
+      return match.style.display = "block";
+    });
+    console.log(dinamicList);
+  };
+
+  var oglasi = Array.from(document.getElementsByName('oglas'));
+  var categoryCheck = Array.from(document.getElementsByName('categoryCheck'));
+  categoryCheck.forEach(function (check) {
+    check.addEventListener('click', funkcija);
+  });
+}
 
 /***/ }),
 

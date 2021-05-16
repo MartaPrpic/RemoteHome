@@ -2,12 +2,21 @@
     padding: 0%;
     margin: 0%;
 }
-
-
 /*-----home page-----*/
+
+.nav-element {
+    margin: 0 20px;
+}
+
+.navbar-brand img {
+    width: 60px;
+    height: 65px;
+    margin-left: 20px;
+}
 
 .navbar {
     color: #fff;
+    background-color: rgb(0, 153, 255);
 }
 
 .nav-link {
@@ -16,10 +25,6 @@
 
 .navbar a:hover {
     color: rgb(0, 50, 83);
-}
-
-.navbar {
-    background-color: rgb(0, 153, 255);
 }
 
 .navbar-nav {
@@ -36,6 +41,10 @@
     text-align: center;
 }
 
+.btn-login i {
+    font-size: 30px;
+}
+
 .search-box {
     height: 40px;
     width: 160px;
@@ -47,10 +56,11 @@
 
 .search button {
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.322);
+    border-radius: 20px;
 }
 
 .karta {
-    height: 300px;
+    height: 520px;
     position: relative;
     justify-content: center;
 }
@@ -68,10 +78,14 @@
     font-size: 20px;
     padding: 0 20px;
     margin: 20px;
-    background-color: rgba(202, 202, 202, 0.425);
-    border-radius: 30px;
+    background-color: rgb(0, 153, 255);
+    border-radius: 10px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
+}
+
+.kviz a {
+    color: white;
 }
 
 .kviz:hover {
@@ -82,18 +96,17 @@
     text-decoration: none;
 }
 
-
-/*novo*/
-
 .categories {
-    margin-bottom: 60px;
-    margin-top: 40px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    text-align: center;
+    background-color: rgb(0, 153, 255);
 }
 
 .categories h2 {
     text-align: center;
     padding: 30px 0px;
-    color: rgb(49, 49, 49);
+    color: white;
     font-weight: bold;
 }
 
@@ -105,10 +118,10 @@
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    background-color: transparent;
-    border-color: rgb(179, 179, 179);
+    background-color: white;
+    border-color: white;
     border-width: 3px;
-    color: black;
+    color: transparent;
     text-align: center;
     font-size: 30px;
     margin: 15px;
@@ -118,10 +131,22 @@
     transition: 0.3s;
 }
 
-.categories button:hover {
-    background-color: rgb(0, 153, 255);
-    border-color: rgb(0, 153, 255);
+.categories i {
     color: black;
+}
+
+.categories i:hover {
+    color: white;
+}
+
+.categories h6 {
+    padding-top: 20px;
+}
+
+.categories button:hover {
+    background-color: rgb(0, 50, 83);
+    border-color: rgb(0, 50, 83);
+    color: white;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.466);
 }
 
@@ -130,35 +155,30 @@
     margin-bottom: 10px;
 }
 
-.ikone-cat h6 {
-    padding: 25px 0;
-    font-size: 15px;
-}
-
 .popular {
     text-align: center;
     padding: 20px 20px;
     padding-bottom: 70px;
-    border-radius: 20px 20px 0 0;
-    background-color: rgb(0, 153, 255);
+    background-color: white;
 }
 
 .popular h2 {
-    color: white;
+    color: rgb(0, 153, 255);
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .kartica {
     margin-top: 40px;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
     text-align: center;
-    background-color: white;
+    background-color: rgb(0, 153, 255);
 }
 
 .kartica h6 {
-    color: rgb(0, 153, 255);
+    color: white;
     font-size: 30px;
 }
 
@@ -168,12 +188,12 @@
 
 .kartica-img img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 0 0 10px 10px;
 }
 
 .rating {
     float: right;
-    bottom: 0px;
+    bottom: 5px;
     right: 20px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.836);
@@ -181,8 +201,6 @@
     position: absolute;
     padding: 5px 10px;
 }
-
-
 /*-------footer------*/
 
 .footer {
@@ -233,9 +251,38 @@
 .footer-link h6 {
     padding-left: 110px;
 }
-
-
 /*-----signup page-----*/
+
+.grad-pozadina {
+    background-image: linear-gradient(rgb(0, 153, 255), rgb(172, 222, 255));
+    height: 100vh;
+}
+
+.login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+}
+
+.hr-or {
+    height: 1px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 .signin {
     padding: 30px;
@@ -249,6 +296,45 @@
 
 .signin:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
+}
+
+.signin button {
+    border-radius: 20px;
+    background-color: rgb(0, 153, 255);
+    border-color: rgb(0, 153, 255);
+}
+
+.signin button:hover {
+    background-color: rgb(0, 50, 83);
+    border-color: rgb(0, 50, 83);
+}
+
+.facebook {
+    margin-bottom: 10px;
+}
+
+.facebook button {
+    border-radius: 20px;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    color: white;
+}
+
+.facebook button:hover {
+    background-color: #111d35;
+    border-color: #111d35;
+}
+
+.google button {
+    border-radius: 20px;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+    color: white;
+}
+
+.google button:hover {
+    background-color: #551c15;
+    border-color: #551c15;
 }
 
 .label {
@@ -265,13 +351,23 @@
     color: white;
     padding: 20px;
 }
-
-
 /*-----user page-----*/
 
 .user-list {
     padding: 20px 0px;
     justify-content: center;
+}
+
+.user-list button {
+    border-radius: 20px;
+    border-color: rgb(0, 153, 255);
+    background-color: transparent;
+    color: rgb(0, 153, 255);
+}
+
+.user-list button:hover {
+    background-color: rgb(0, 153, 255);
+    color: #fff;
 }
 
 .user-list ul {
@@ -308,55 +404,88 @@
     text-align: center;
     justify-content: center;
 }
-
-
 /*-----oglas page-----*/
 
-.oglas-nav i {
-    font-size: 40px;
+.oglas-slika {
+    background-size: cover;
+    text-align: center;
+    color: rgb(0, 153, 255);
+    border-color: rgb(0, 153, 255);
+    border-style: dashed;
+    margin: 20px;
+}
+
+.oglas-slika h4 {
+    padding: 100px 0px;
 }
 
 .oglas {
-    background-color: rgb(0, 153, 255);
-    margin: 30px 40px;
+    margin: 10px 40px;
     text-align: center;
     border-radius: 30px;
-    color: white;
+    color: rgb(0, 153, 255);
 }
 
 .oglas h4 {
-    color: white;
-    font-weight: bold;
-    font-size: 26px;
+    color: rgb(0, 153, 255);
+    font-size: 25px;
     padding: 10px 0px;
 }
 
 .oglas-okvir {
-    padding: 30px;
+    padding: 10px 20px;
     text-align: center;
     justify-content: center;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.322);
-    border-radius: 30px;
-}
-
-.oglas-okvir:hover {
-    box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.418);
 }
 
 .oglas-basic {
-    padding: 10px 0;
+    padding: 4px 0;
 }
 
 .oglas-basic h6 {
     text-align: left;
-    color: white;
+    color: rgb(0, 153, 255);
     padding-top: 10px;
     font-size: 20px;
 }
-
-.oglas-basic button {
+.hidden {position:absolute;visibility:hidden;opacity:0;}
+input[type=checkbox] + label {
+    text-transform: capitalize;
+    padding:5px 20px;
+    text-align: center;
+    border:1px solid rgb(0, 153, 255);
     border-radius: 50px;
     margin-bottom: 5px;
+    color: rgb(0, 153, 255);
+}
+input[type=checkbox]:hover + label{
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+input[type=checkbox]:checked + label {
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+input[type=radio] + label {
+    text-transform: capitalize;
+    padding:5px 20px;
+    text-align: center;
+    border:1px solid rgb(0, 153, 255);
+    border-radius: 50px;
+    margin-bottom: 5px;
+    color: rgb(0, 153, 255);
+}
+input[type=radio]:hover + label{
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+input[type=radio]:checked + label {
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .oglas-post {
@@ -365,17 +494,16 @@
 }
 
 .oglas-post button {
-    padding: 10px 30px;
+    padding: 5px 20px;
     border-width: 3px;
-    border-radius: 20px;
-    border-color: white;
-    background-color: white;
-    color: rgb(0, 153, 255);
+    border-radius: 50px;
+    border-color: rgb(0, 153, 255);
+    background-color: rgb(0, 153, 255);
+    color: white;
     font-size: 20px;
 }
-
-
 /*-----accommodation page-----*/
+
 
 .slike {
     padding-top: 10px;
@@ -385,15 +513,32 @@
     border-radius: 50px;
     border-width: 2px;
     margin-top: 5px;
+    border-color: rgb(0, 153, 255);
+    color: rgb(0, 153, 255);
+}
+
+.filter button:hover {
+    border-color: rgb(0, 153, 255);
+    color: white;
+    background-color: rgb(0, 153, 255);
 }
 
 .filter {
     padding-top: 20px;
 }
 
+#categories{
+    margin: 0 auto;
+    width:80%; 
+    text-align:center;
+    padding: 40px 0px 10px 0px;
+}
+
 .smjestaj-box {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .smjestaj-box:hover {
@@ -403,6 +548,7 @@
 .smjestaji {
     padding: 20px 20px;
     margin: 30px 0px;
+    min-height: 800px;
 }
 
 .smjestaj-img img {
@@ -411,8 +557,8 @@
 
 .smjestaj-img {
     position: relative;
-    margin-bottom: 20px;
     overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
 .smjestaj-opis a {
@@ -428,7 +574,36 @@
     background-color: rgb(0, 153, 255);
     padding: 5px 0;
     color: white;
-    text-align: center;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+.smjestaj-opis h6{
+    padding:15px;
+}
+
+.srce {
+    margin: 0 30px;
+    display: flex;
+}
+
+.srce h6 {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 17px;
+}
+
+.srce button {
+    color: white;
+    font-size: 20px;
+    padding-left: 110px;
+    position: absolute !important;
+    bottom:0px !important;
+    right:10px !important;
+}
+
+.srce button:hover {
+    color: rgb(0, 50, 83);
 }
 
 .infor {
@@ -444,18 +619,16 @@
     background-color: rgba(0, 153, 255, 0.699);
 }
 
-.infor p {
+.infor ul {
     padding-top: 20px;
     color: white;
     opacity: 0;
     transition: 0.5s;
 }
 
-.infor:hover p {
+.infor:hover ul {
     opacity: 1;
 }
-
-
 /*-----room page-----*/
 
 .about-room {
@@ -483,16 +656,21 @@
 }
 
 .room-container {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .room {
     padding: 50px 0;
-    padding-bottom: 250px;
+    padding-bottom: 100px;
 }
 
 .karta2 {
-    justify-content: center;
+    height: 350px;
+}
+
+.karta2 h2 {
+    color: rgb(0, 153, 255);
+    padding-bottom: 15px;
 }
 
 .btn-container a {
@@ -511,8 +689,8 @@
 }
 
 .room-icon {
-    text-align: center;
-    padding-top: 20px;
+    padding: 30px 0px;
+    margin-left: 80px;
 }
 
 .room-icon i {
@@ -522,6 +700,10 @@
 .room-icon button {
     border-radius: 50%;
     background-color: rgb(0, 153, 255);
+}
+
+.room-icon button:hover {
+    background-color: rgb(0, 50, 83);
 }
 
 .input-group-addon {
@@ -538,7 +720,7 @@
     border-radius: 20px;
     border-color: rgb(0, 153, 255);
     background-color: rgba(255, 255, 255, 0.555);
-    margin: 10px;
+    margin: 5px;
 }
 
 .review-box img {
@@ -566,6 +748,221 @@
     background-color: rgb(0, 153, 255);
     border-color: rgb(0, 153, 255);
 }
+/*------kviz---------*/
+
+.kviz-pocetna {
+    padding-top: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.kviz-pocetna h3 {
+    color: rgb(0, 153, 255);
+    padding-bottom: 30px;
+}
+
+.kviz-pocetna button {
+    background-color: rgb(0, 153, 255);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+.kviz-pocetna button:hover {
+    background-color: rgb(0, 50, 83);
+    color: #fff;
+}
+
+.animacija {
+    height: 300px;
+    width: 300px;
+    margin-left: 35px;
+    margin-bottom: 100px;
+}
+
+.quiz-card{
+    padding:70px 0px;
+}
+
+.quiz-call{
+    padding-top:80px;
+}
+.result h3{
+    padding-bottom:50px;
+}
+.quiz-button{
+    padding: 5px 20px !important;
+    border-radius: 50px !important;
+    font-size: 22px !important;
+    color: white !important;
+    background-color: rgb(0, 153, 255) !important ;
+}
+
+.quiz-acc{
+    width:40%;
+    height:60px;
+    border-color: transparent !important;
+    margin-top:50px !important;
+    padding: 5px 20px !important;
+    border-radius: 10px !important;
+    font-size: 22px !important;
+    color: white !important;
+    background-color: rgb(0, 153, 255) !important ;
+}
+.interesi h3 {
+    color: rgb(0, 153, 255);
+    padding-top: 20px;
+}
+
+.interesi {
+    margin-bottom: 30px;
+}
+
+.interes {
+    width:auto !important;
+    padding:0px !important;
+    font-size: 18px;
+}
+
+.interes label {
+    margin-left: 5px;
+}
+
+.smjer a {
+    color: rgb(0, 153, 255);
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid rgb(0,153,255);
+    border-radius: 50px;
+}
+
+.smjer a:hover {
+    text-decoration: none;
+    color: rgb(0, 50, 83);
+    border: 1px solid rgb(0,50,83);
+}
+
+.smjer {
+    margin-bottom: 300px;
+    text-align: center;
+}
+
+.klima h6 {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.klima label {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.area h6 {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.area label {
+    margin-left: 5px;
+}
+
+.area1 {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.food-container{
+    height:200px;
+}
+
+.food{
+    height: 200px;
+    width:300px;
+    -o-object-fit:cover;
+       object-fit:cover;
+    border-radius:50px;
+}
+
+.rezultat {
+    color: rgb(0, 153, 255);
+    font-size: 30px;
+    text-align: center;
+    margin: 300px 0px;
+    /*border:1px solid rgb(0, 153, 255);
+    border-radius: 10px;
+    width: auto;
+    padding:20px;*/
+}
+
+.rezultat p{
+    font-size: 22px;
+}
+
+/*--------favoriti--------*/
+.favoriti{
+    margin: 20px;
+    min-height: 800px;
+}
+.favoriti h2 {
+    color: rgb(0, 153, 255);
+    padding: 20px 0px;
+}
+
+.favorit{
+    float:left;
+    border-radius: 10px;
+    background-color: rgb(0, 153, 255);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.favorit-body{
+    z-index: 1;
+    overflow: hidden;
+    padding:20px;
+    float:left;
+}
+
+.favorit-body h5{
+    color:black !important;
+    padding-bottom: 20px;
+}
+
+.favorit-body .far{
+    float: right;
+    background-color: white;
+    position: absolute;
+    border-radius: 50px;
+    border-color: white;
+    padding: 10px;
+    bottom:22px;
+    right: 22px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.favorit-body p {
+    color:black !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.favorit img{
+    width:100%;
+    height:250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+}
 
 
 /*-----------------za veće ekrane-------------------*/
@@ -576,7 +973,6 @@
         margin: 0%;
     }
     /*-----home page-----*/
-    /*novo*/
     .search-box {
         height: 40px;
         width: 250px;
@@ -607,12 +1003,11 @@
         padding-top: 15px;
         padding-bottom: 5px;
         margin: 20px 450px;
-        background-color: rgba(202, 202, 202, 0.425);
     }
-    /*novo*/
     .categories {
-        margin-bottom: 150px;
-        margin-top: 80px;
+        padding-bottom: 150px;
+        padding-top: 80px;
+        text-align: center;
     }
     .categories h2 {
         padding: 40px 0px;
@@ -620,48 +1015,46 @@
         font-size: 50px;
     }
     .categories button {
-        font-size: 30px;
-        margin: 10px;
-        margin-bottom: 40px;
+        margin: 30px;
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
         padding: 5px;
         box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.322);
         transition: 0.3s;
     }
+    .categories h6 {
+        padding-top: 40px;
+        font-size: 20px;
+    }
     .categories button:hover {
-        box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.466);
+        box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.466);
     }
     .ikone-cat h6 {
         padding: 30px 0;
         font-size: 20px;
     }
-    /*novo*/
     .popular {
         text-align: center;
         padding: 20px 40px;
         padding-bottom: 70px;
-        border-radius: 20px 20px 0 0;
-        background-color: rgb(0, 153, 255);
     }
     .popular h2 {
-        color: white;
         font-weight: bold;
-        font-size: 40px;
+        letter-spacing: 6px;
+        font-size: 50px;
     }
-    /*novo*/
     .kartica {
         margin-top: 40px;
-        border-radius: 30px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.322);
         transition: 0.3s;
         text-align: center;
-        background-color: white;
     }
     .kartica:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.466);
     }
     .kartica-img img {
         width: 100%;
-        border-radius: 30px;
     }
     /*-------footer------*/
     .footer {
@@ -692,6 +1085,16 @@
     .footer-link h6 {
         padding-left: 110px;
     }
+    /*----accommodation page----*/
+    .srce {
+        margin: 0 20px;
+    }
+    .srce h6 {
+        padding-left: 5px;
+    }
+    .srce button {
+        padding-left: 100px;
+    }
     /*-----user page-----*/
     .user-box {
         padding: 40px 150px;
@@ -719,59 +1122,66 @@
         padding: 20px;
     }
     /*-----oglas page-----*/
-    .oglas-nav i {
-        font-size: 40px;
+    .oglas-slika {
+        margin: 30px;
+    }
+    .oglas-slika h4 {
+        padding: 140px 0px;
+        font-size: 30px;
     }
     .oglas {
-        width: 800px;
-        margin: 50px 350px;
-        border-radius: 80px;
+        margin: 20px 150px;
     }
     .oglas h4 {
-        font-size: 40px;
+        font-size: 50px;
         margin-bottom: 20px;
     }
     .oglas-okvir {
         padding: 30px;
         text-align: center;
-        border-radius: 80px;
         justify-content: center;
-        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.322);
-    }
-    .oglas-okvir:hover {
-        box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.322);
     }
     .oglas-basic {
-        padding: 10px 0;
+        padding: 5px 0;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .oglas-basic h6 {
         text-align: left;
-        color: white;
         font-size: 25px;
     }
     .oglas-basic button {
         border-radius: 50px;
+        border-color: rgb(0, 153, 255);
+        color: rgb(0, 153, 255);
     }
     .oglas-post {
         padding-top: 80px;
         padding-bottom: 50px;
     }
-    .oglas-post button {
-        padding: 10px 25px;
+    .button {
+        padding: 5px 20px;
+        border-radius: 50px;
         font-size: 30px;
-        border-radius: 20px;
+        color: white;
     }
     /*-----room page-----*/
+    .room {
+        padding-bottom: 150px;
+    }
+    .karta2 {
+        height: 520px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .karta2 h2 {
+        padding-bottom: 25px;
+    }
     .about-room img {
         width: 100%;
         border-radius: 30px;
         padding: 10px;
         margin: 10px;
-    }
-    .room-container {
-        margin-bottom: 100px;
     }
     .btn-container a {
         background-color: rgb(0, 153, 255);
@@ -795,8 +1205,7 @@
         padding-bottom: 30px;
     }
     .room-icon {
-        text-align: center;
-        padding-top: 20px;
+        margin-left: 850px;
     }
     .room-icon i {
         color: #fff;
@@ -828,5 +1237,108 @@
     .profili {
         padding-top: 10px;
         border-radius: 50%;
+    }
+    /*------kviz---------*/
+    .kviz-pocetna {
+        text-align: center;
+        justify-content: center;
+        padding-top: 80px;
+        margin-bottom: 150px;
+    }
+    .kviz-pocetna h3 {
+        color: rgb(0, 153, 255);
+        font-size: 50px;
+        padding-bottom: 30px;
+        padding-top: 100px;
+    }
+    .animacija {
+        height: 450px;
+        width: 450px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+    .interesi {
+        margin-bottom: 100px;
+    }
+    .interesi h3 {
+        padding-top: 50px;
+        padding-bottom: 60px;
+        font-size: 40px;
+    }
+    /*--------favoriti--------*/
+    
+    .favoriti h2 {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    .smjer {
+        margin-bottom: 400px;
+    }
+    .rezultat {
+        color: rgb(0, 153, 255);
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 400px;
+    }
+    /*--------favoriti--------*/
+    .favoriti{
+        margin-bottom: 100px;
+    }
+    .favoriti h2 {
+        color: rgb(0, 153, 255);
+        padding: 20px 0px;
+    }
+
+    .favorit{
+        float:left;
+        border-radius: 10px;
+        background-color: rgb(0, 153, 255);
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .favorit-body{
+        z-index: 1;
+        overflow: hidden;
+        padding:20px;
+        float:left;
+    }
+
+    .favorit-body h5{
+        color:black !important;
+        padding-bottom: 20px;
+    }
+
+    .favorit-body .far{
+        float: right;
+        background-color: white;
+        position: absolute;
+        border-radius: 50px;
+        border-color: white;
+        padding: 10px;
+        top:22px !important;
+        bottom: 193px !important;
+        right: 22px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .favorit-body p {
+        color:black !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 400px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+    .favorit img{
+        width:30%;
+        height:250px;
+        -o-object-fit: cover;
+           object-fit: cover;
+        float: left;
+        border-radius: 10px 0px 0px 10px;
     }
 }

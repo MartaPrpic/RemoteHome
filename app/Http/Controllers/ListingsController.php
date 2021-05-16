@@ -42,8 +42,13 @@ class ListingsController extends Controller
         $listing->outsidesize=$req->outsidesize;
         $listing->additionalinfo=$req->additionalinfo;
         $listing->expences=$req->expences;
+        $listing->phone_number=$req->phone_number;
         $listing->save();
         return redirect('/');
+    }
+    function getAddress(){
+        $data = Listing::all();
+        return view('home', ['listings' => $data]);
     }
     function show()
     {
@@ -56,6 +61,10 @@ class ListingsController extends Controller
         return view('detail', ['listing'=>$data]);
     }
 
+    function show_phone_number(){
+        
+    }
+
     function favourite(Request $req)
     {
         if($req->session()->has('user'))
@@ -64,11 +73,11 @@ class ListingsController extends Controller
             $favourite->user_id=$req->session()->get('user')['id'];
             $favourite->listing_id=$req->listing_id;
             $favourite->save();
-            return redirect('/');
+            return redirect('accommodation');
         }
         else
         {
-            return redirect('/login');
+            return redirect('login');
         }
     }
     function favouriteList()
@@ -77,9 +86,17 @@ class ListingsController extends Controller
         $favouriteListings = DB::table('favourites')
             ->join('listings', 'favourites.listing_id', '=', 'listings.id')
             ->where('favourites.user_id', $user_id)
-            ->select('listings.*')
+            ->select('listings.*', 'favourites.id as favourites_id')
             ->get();
 
             return view('favourites', ['favourites' => $favouriteListings]);
+    }
+    function removeFav($id){
+        Favourite::destroy($id);
+        return redirect('favourites');
+    }
+    function unHeart($id){
+        Favourite::destroy($id);
+        return redirect('accommodation');
     }
 }

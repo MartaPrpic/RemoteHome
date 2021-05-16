@@ -19,7 +19,7 @@
 <body style="background-color: rgb(0, 153, 255);">
     <div class="container">
         <div class="label">
-            <a href="index.html"><img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; "></a>
+            <a href="/"><img src="img/logo.png" alt="Logo" style="width: 90px; height: 95px; "></a>
             <h4>Log In</h4>
         </div>
 

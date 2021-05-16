@@ -23,7 +23,8 @@ class Listing extends Model
         'insidesize',
         'outsidesize',
         'additionalinfo',
-        'expences'
+        'expences',
+        'phone_number'
     ];
     protected $casts = [
         'images' => 'array',
