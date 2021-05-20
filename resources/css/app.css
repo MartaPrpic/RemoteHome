@@ -2,6 +2,8 @@
     padding: 0%;
     margin: 0%;
 }
+
+
 /*-----home page-----*/
 
 .nav-element {
@@ -16,7 +18,7 @@
 
 .navbar {
     color: #fff;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
 }
 
 .nav-link {
@@ -45,18 +47,147 @@
     font-size: 30px;
 }
 
-.search-box {
-    height: 40px;
-    width: 160px;
-    border-radius: 10px;
-    border-style: none;
-    padding-left: 10px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.322);
+.pretrazivanje {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    z-index: 1;
+    background-image: url('/img/obala2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
 }
 
-.search button {
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.322);
-    border-radius: 20px;
+.pretrazivanje table {
+    display: table-cell !important;
+    width: 100%;
+    padding: 0px 10px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16) !important;
+    text-align: left;
+    vertical-align: middle;
+    border-spacing: 0px;
+    line-height: 1.43;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 400px;
+    background-color: white;
+    margin-left: 0px;
+}
+
+.pretrazivanje th,
+td {
+    display: table-cell;
+    box-sizing: border-box;
+    clear: both;
+    vertical-align: middle;
+    height: 60px;
+    border-radius: 8px 0 0 8px;
+    border-spacing: 0px;
+    border-right: none;
+}
+
+.pretrazivanje input {
+    outline: none;
+    display: inline-block;
+    background-color: transparent !important;
+    border: 0px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    text-overflow: ellipsis !important;
+    color: #484848 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    line-height: normal;
+    text-align: start;
+    cursor: text;
+    white-space: nowrap !important;
+    border-spacing: 0px !important;
+    white-space: nowrap;
+}
+
+.fa-users {
+    margin-right: 8px;
+}
+
+.fa-calendar-alt {
+    margin-right: 8px;
+}
+
+.guests-button {
+    position: relative !important;
+    text-align: left;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-overflow: ellipsis !important;
+    color: rgb(118, 118, 118) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 13px 14px;
+    position: relative;
+    border-width: initial;
+    white-space: nowrap;
+}
+
+.guests-button:focus {
+    box-shadow: rgb(34, 34, 34) 0px 0px 0px 2px !important;
+}
+
+.date-button {
+    position: relative !important;
+    text-align: left;
+    display: table !important;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-overflow: ellipsis !important;
+    color: rgb(118, 118, 118) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 13px 14px;
+    position: relative;
+    border-width: initial;
+    white-space: nowrap;
+}
+
+.date-button:focus {
+    box-shadow: rgb(34, 34, 34) 0px 0px 0px 2px !important;
+}
+
+.date-field {
+    text-align: center;
+}
+
+.search-td {
+    width: 200px;
+    margin: 0 0 0 5px !important;
+}
+
+.search-button {
+    padding: 6px 16px 6px 16px;
+    margin: 0 0 0 10px;
+    background-color: rgb(0, 195, 230);
+    border: none;
+    border-radius: 50px;
+    color: white;
+}
+
+.search-icon {
+    -webkit-text-stroke: .10px;
 }
 
 .karta {
@@ -65,20 +196,12 @@
     justify-content: center;
 }
 
-.search {
-    position: absolute;
-    bottom: 120px;
-    right: 20px;
-    padding-left: 15px;
-    padding-right: 48px;
-}
-
 .kviz {
     text-align: center;
     font-size: 20px;
     padding: 0 20px;
     margin: 20px;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     border-radius: 10px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
@@ -100,7 +223,7 @@
     padding-bottom: 60px;
     padding-top: 40px;
     text-align: center;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
 }
 
 .categories h2 {
@@ -163,7 +286,7 @@
 }
 
 .popular h2 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -174,7 +297,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
     text-align: center;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
 }
 
 .kartica h6 {
@@ -201,6 +324,8 @@
     position: absolute;
     padding: 5px 10px;
 }
+
+
 /*-------footer------*/
 
 .footer {
@@ -211,7 +336,7 @@
 }
 
 .footer a {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     text-decoration: none;
     font-size: 14px;
 }
@@ -251,12 +376,9 @@
 .footer-link h6 {
     padding-left: 110px;
 }
-/*-----signup page-----*/
 
-.grad-pozadina {
-    background-image: linear-gradient(rgb(0, 153, 255), rgb(172, 222, 255));
-    height: 100vh;
-}
+
+/*-----signup page-----*/
 
 .login-or {
     position: relative;
@@ -285,13 +407,14 @@
 }
 
 .signin {
-    padding: 30px;
+    padding: 15px 30px;
     text-align: center;
     background-color: #fff;
     border-radius: 50px;
     justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.322);
     transition: 0.3s;
+    margin-bottom: 300px;
 }
 
 .signin:hover {
@@ -300,8 +423,8 @@
 
 .signin button {
     border-radius: 20px;
-    background-color: rgb(0, 153, 255);
-    border-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
+    border-color: rgb(0, 195, 230);
 }
 
 .signin button:hover {
@@ -351,6 +474,8 @@
     color: white;
     padding: 20px;
 }
+
+
 /*-----user page-----*/
 
 .user-list {
@@ -360,13 +485,13 @@
 
 .user-list button {
     border-radius: 20px;
-    border-color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
     background-color: transparent;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
 }
 
 .user-list button:hover {
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     color: #fff;
 }
 
@@ -380,7 +505,7 @@
 }
 
 .user-list a:hover {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     text-decoration: none;
 }
 
@@ -390,7 +515,7 @@
 }
 
 .navbar-user a {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding: 10px 0;
 }
 
@@ -404,13 +529,15 @@
     text-align: center;
     justify-content: center;
 }
+
+
 /*-----oglas page-----*/
 
 .oglas-slika {
     background-size: cover;
     text-align: center;
-    color: rgb(0, 153, 255);
-    border-color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
+    border-color: rgb(0, 195, 230);
     border-style: dashed;
     margin: 20px;
 }
@@ -423,11 +550,11 @@
     margin: 10px 40px;
     text-align: center;
     border-radius: 30px;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
 }
 
 .oglas h4 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     font-size: 25px;
     padding: 10px 0px;
 }
@@ -444,45 +571,56 @@
 
 .oglas-basic h6 {
     text-align: left;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding-top: 10px;
     font-size: 20px;
 }
-.hidden {position:absolute;visibility:hidden;opacity:0;}
-input[type=checkbox] + label {
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+input[type=checkbox]+label {
     text-transform: capitalize;
-    padding:5px 20px;
+    padding: 5px 20px;
     text-align: center;
-    border:1px solid rgb(0, 153, 255);
+    border: 1px solid rgb(0, 195, 230);
     border-radius: 50px;
     margin-bottom: 5px;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
 }
-input[type=checkbox]:hover + label{
-    background-color: rgb(0, 153, 255);
+
+input[type=checkbox]:hover+label {
+    background-color: rgb(0, 195, 230);
     color: white;
 }
-input[type=checkbox]:checked + label {
-    background-color: rgb(0, 153, 255);
+
+input[type=checkbox]:checked+label {
+    background-color: rgb(0, 195, 230);
     color: white;
     font-weight: bold;
     font-style: italic;
 }
-input[type=radio] + label {
+
+input[type=radio]+label {
     text-transform: capitalize;
-    padding:5px 20px;
+    padding: 5px 20px;
     text-align: center;
-    border:1px solid rgb(0, 153, 255);
+    border: 1px solid rgb(0, 195, 230);
     border-radius: 50px;
     margin-bottom: 5px;
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
 }
-input[type=radio]:hover + label{
-    background-color: rgb(0, 153, 255);
+
+input[type=radio]:hover+label {
+    background-color: rgb(0, 195, 230);
     color: white;
 }
-input[type=radio]:checked + label {
-    background-color: rgb(0, 153, 255);
+
+input[type=radio]:checked+label {
+    background-color: rgb(0, 195, 230);
     color: white;
     font-weight: bold;
     font-style: italic;
@@ -497,13 +635,103 @@ input[type=radio]:checked + label {
     padding: 5px 20px;
     border-width: 3px;
     border-radius: 50px;
-    border-color: rgb(0, 153, 255);
-    background-color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
+    background-color: rgb(0, 195, 230);
     color: white;
     font-size: 20px;
 }
+
+
 /*-----accommodation page-----*/
 
+#mobile-filter input[type=checkbox]+label {
+    width: 120px;
+    height: 50px;
+    font-size: 10px;
+}
+
+#mobile-filter input[type=radio]+label {
+    border-color: transparent;
+    background-color: transparent;
+    padding: 0px;
+}
+
+#mobile-filter input[type=radio]:hover+label {
+    color: rgb(0, 195, 230);
+}
+
+#mobile-filter input[type=radio]:checked+label {
+    color: rgb(0, 195, 230);
+    font-weight: bold;
+    font-style: italic;
+}
+
+#mobile-filter h6 {
+    font-size: 15px;
+}
+
+#mobile-filter ul {
+    list-style: none;
+    padding: 5px
+}
+
+.filter-acc {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-acc button {
+    color: rgb(0, 195, 230);
+    border-color: rgb(0, 195, 230);
+    border-radius: 50px;
+}
+
+.filter-acc button:hover {
+    color: white;
+    background-color: rgb(0, 195, 230);
+}
+
+@media(min-width:991px) {
+    #mobile-filter {
+        width: 25%;
+        padding: 10px;
+        margin: 0;
+        float: left
+    }
+}
+
+@media(min-width:768px) and (max-width:991px) {
+    #mobile-filter {
+        width: 25%;
+        padding: 10px;
+        margin: 0;
+        float: left
+    }
+}
+
+@media(min-width:568px) and (max-width:767px) {
+    #mobile-filter {
+        width: 25%;
+        padding: 10px;
+        margin: 0;
+        float: left
+    }
+}
+
+@media(max-width:567px) {
+    .list-group-item {
+        padding: 3px
+    }
+    .filter-acc {
+        display: block;
+        margin-left: 70%;
+        margin-top: 2%
+    }
+    #mobile-filter {
+        padding: 10px
+    }
+}
 
 .slike {
     padding-top: 10px;
@@ -513,24 +741,24 @@ input[type=radio]:checked + label {
     border-radius: 50px;
     border-width: 2px;
     margin-top: 5px;
-    border-color: rgb(0, 153, 255);
-    color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
+    color: rgb(0, 195, 230);
 }
 
 .filter button:hover {
-    border-color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
     color: white;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
 }
 
 .filter {
     padding-top: 20px;
 }
 
-#categories{
+#categories {
     margin: 0 auto;
-    width:75%; 
-    text-align:center;
+    width: 80%;
+    text-align: center;
     padding: 40px 0px 10px 0px;
 }
 
@@ -571,15 +799,15 @@ input[type=radio]:checked + label {
 }
 
 .smjestaj-opis {
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     padding: 5px 0;
     color: white;
     border-radius: 0 0 10px 10px;
     position: relative;
 }
 
-.smjestaj-opis h6{
-    padding:15px;
+.smjestaj-opis h6 {
+    padding: 15px;
 }
 
 .srce {
@@ -598,8 +826,8 @@ input[type=radio]:checked + label {
     font-size: 20px;
     padding-left: 110px;
     position: absolute !important;
-    bottom:0px !important;
-    right:10px !important;
+    bottom: 0px !important;
+    right: 10px !important;
 }
 
 .srce button:hover {
@@ -616,7 +844,7 @@ input[type=radio]:checked + label {
 }
 
 .infor:hover {
-    background-color: rgba(0, 153, 255, 0.699);
+    background-color: rgba(0, 195, 230, 0.699);
 }
 
 .infor ul {
@@ -629,18 +857,21 @@ input[type=radio]:checked + label {
 .infor:hover ul {
     opacity: 1;
 }
+
+
 /*-----room page-----*/
 
 .about-room {
     align-content: center;
     margin-top: 15px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .about-room img {
     width: 100%;
     border-radius: 30px;
     padding: 5px;
+    margin-bottom: 10px;
 }
 
 .basic-lista {
@@ -664,17 +895,71 @@ input[type=radio]:checked + label {
     padding-bottom: 100px;
 }
 
+.blue-border textarea {
+    margin-top: 30px;
+    border: 1px solid rgb(0, 195, 230);
+}
+
+.blue-border .form-control:focus {
+    border: 1px solid rgb(0, 195, 230);
+    box-shadow: 0 0 0 0.2rem rgba(104, 186, 200, 0.25);
+}
+
+.rating2 {
+    float: left;
+    margin-top: 10px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.rating2 input[type=radio]+label {
+    background-color: transparent;
+    border: transparent;
+    color: #ddd;
+    padding: 5px;
+}
+
+.rating2>input {
+    display: none;
+}
+
+.rating2>label:before {
+    background-color: transparent;
+    border: transparent;
+}
+
+.rating2>label {
+    float: right;
+}
+
+.rating2>input:checked~label,
+.rating2:not(:checked)>label:hover,
+.rating2:not(:checked)>label:hover~label {
+    color: #FFD700;
+    background-color: transparent;
+    border: none;
+}
+
+.rating2>input:checked+label:hover,
+.rating2>input:checked~label:hover,
+.rating2>label:hover~input:checked~label,
+.rating2>input:checked~label:hover~label {
+    color: #FFED85;
+    background-color: transparent;
+    border: none;
+}
+
 .karta2 {
     height: 350px;
 }
 
 .karta2 h2 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding-bottom: 15px;
 }
 
 .btn-container a {
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     padding: 10px;
     box-shadow: 0px -4px 5px rgba(0, 0, 0, 0.322);
 }
@@ -699,7 +984,7 @@ input[type=radio]:checked + label {
 
 .room-icon button {
     border-radius: 50%;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
 }
 
 .room-icon button:hover {
@@ -714,24 +999,24 @@ input[type=radio]:checked + label {
     border-radius: 0 10px 10px 0;
 }
 
+.review-box i {
+    color: #FFD700;
+}
+
 .review-box {
     border-width: 2px;
     border-style: solid;
     border-radius: 20px;
-    border-color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
     background-color: rgba(255, 255, 255, 0.555);
-    margin: 5px;
 }
 
 .review-box img {
-    height: 26px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-}
-
-.profili {
-    padding-top: 10px;
-    border-radius: 50%;
+    padding: 0px;
+    margin: 10px;
 }
 
 .back {
@@ -740,15 +1025,170 @@ input[type=radio]:checked + label {
 
 .back button {
     border-radius: 20px;
-    border-color: rgb(0, 153, 255);
+    border-color: rgb(0, 195, 230);
     border-width: 2px;
+    color: rgb(0, 195, 230);
 }
 
 .back button:hover {
-    background-color: rgb(0, 153, 255);
-    border-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
+    border-color: rgb(0, 195, 230);
 }
+
+.room h2 {
+    color: rgb(0, 195, 230);
+    margin-bottom: 10px;
+}
+
+
+/* ---------- CALENDAR ---------- */
+
+.calendar {
+    width: 300px;
+    background: #f9f9f9;
+    color: #0e171c;
+    display: grid;
+    margin: 0;
+    padding-bottom: 40px;
+    place-items: center;
+}
+
+.calendar h2 {
+    text-transform: uppercase;
+}
+
+.calendar a {
+    text-decoration: none;
+    padding: 0px;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.calendar a:hover {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.calendar h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin: .25em 0;
+}
+
+.calendar h3 {
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: .33em 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.container {
+    width: 510px;
+}
+
+.ime-mjeseca {
+    position: relative;
+    width: 300px;
+    text-align: center;
+}
+
+.calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.calendar tbody {
+    color: #7c8a95;
+}
+
+.calendar tbody td:hover {
+    border: 2px solid #00addf;
+}
+
+.calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+    color: #cbd1d2;
+}
+
+.calendar .prev-month:hover,
+.calendar .next-month:hover {
+    border: 2px solid #cbd1d2;
+}
+
+.current-day {
+    background: #00addf;
+    color: #f9f9f9;
+}
+
+.event {
+    cursor: pointer;
+    position: relative;
+}
+
+.event:after {
+    background: #00addf;
+    border-radius: 50%;
+    bottom: .5em;
+    display: block;
+    content: '';
+    height: .5em;
+    left: 50%;
+    margin: -.25em 0 0 -.25em;
+    position: absolute;
+    width: .5em;
+}
+
+.event.current-day:after {
+    background: #f9f9f9;
+}
+
+.btn-prev,
+.btn-next {
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    height: 2em;
+    line-height: 2em;
+    margin: -1em;
+    position: absolute;
+    top: 50%;
+    width: 2em;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+    background: #cbd1d2;
+    color: #f9f9f9;
+}
+
+.btn-prev {
+    left: 2.5em;
+}
+
+.btn-next {
+    right: 2.5em;
+}
+
+
 /*------kviz---------*/
+
+#food label {
+    border: none;
+}
 
 .kviz-pocetna {
     padding-top: 50px;
@@ -757,12 +1197,12 @@ input[type=radio]:checked + label {
 }
 
 .kviz-pocetna h3 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding-bottom: 30px;
 }
 
 .kviz-pocetna button {
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     color: #fff;
     border-radius: 20px;
     border: none;
@@ -778,41 +1218,44 @@ input[type=radio]:checked + label {
 .animacija {
     height: 300px;
     width: 300px;
-    margin-left: 23px;
+    margin-left: 35px;
     margin-bottom: 100px;
 }
 
-.quiz-card{
-    padding:70px 0px;
+.quiz-card {
+    padding: 70px 0px;
 }
 
-.quiz-call{
-    padding-top:80px;
+.quiz-call {
+    padding-top: 80px;
 }
-.result h3{
-    padding-bottom:50px;
+
+.result h3 {
+    padding-bottom: 50px;
 }
-.quiz-button{
+
+.quiz-button {
     padding: 5px 20px !important;
     border-radius: 50px !important;
     font-size: 22px !important;
     color: white !important;
-    background-color: rgb(0, 153, 255) !important ;
+    background-color: rgb(0, 195, 230) !important;
 }
 
-.quiz-acc{
-    width:40%;
-    height:60px;
+.quiz-acc {
+    width: 40%;
+    height: 60px;
     border-color: transparent !important;
-    margin-top:50px !important;
+    margin-top: 50px !important;
     padding: 5px 20px !important;
     border-radius: 10px !important;
     font-size: 22px !important;
     color: white !important;
-    background-color: rgb(0, 153, 255) !important ;
+    background-color: rgb(0, 195, 230) !important;
 }
+
 .interesi h3 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding-top: 20px;
 }
 
@@ -821,8 +1264,8 @@ input[type=radio]:checked + label {
 }
 
 .interes {
-    width:auto !important;
-    padding:0px !important;
+    width: auto !important;
+    padding: 0px !important;
     font-size: 18px;
 }
 
@@ -831,17 +1274,17 @@ input[type=radio]:checked + label {
 }
 
 .smjer a {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     font-size: 20px;
     padding: 10px;
-    border: 1px solid rgb(0,153,255);
+    border: 1px solid rgb(0, 195, 230);
     border-radius: 50px;
 }
 
 .smjer a:hover {
     text-decoration: none;
     color: rgb(0, 50, 83);
-    border: 1px solid rgb(0,50,83);
+    border: 1px solid rgb(0, 50, 83);
 }
 
 .smjer {
@@ -875,76 +1318,81 @@ input[type=radio]:checked + label {
     font-size: 18px;
 }
 
-.food-container{
-    height:200px;
+.food-container {
+    height: 200px;
 }
 
-.food{
+.food {
     height: 200px;
-    width:300px;
-    object-fit:cover;
-    border-radius:50px;
+    width: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 .rezultat {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     font-size: 30px;
     text-align: center;
     margin: 300px 0px;
-    /*border:1px solid rgb(0, 153, 255);
+    /*border:1px solid rgb(0, 195, 230);
     border-radius: 10px;
     width: auto;
     padding:20px;*/
 }
 
-.rezultat p{
+.rezultat p {
     font-size: 22px;
 }
 
+
 /*--------favoriti--------*/
-.favoriti{
+
+.favoriti {
     margin: 20px;
+    min-height: 800px;
 }
+
 .favoriti h2 {
-    color: rgb(0, 153, 255);
+    color: rgb(0, 195, 230);
     padding: 20px 0px;
 }
 
-.favorit{
-    float:left;
+.favorit {
+    float: left;
     border-radius: 10px;
-    background-color: rgb(0, 153, 255);
+    background-color: rgb(0, 195, 230);
     margin-bottom: 50px;
     position: relative;
 }
 
-.favorit-body{
+.favorit-body {
     z-index: 1;
     overflow: hidden;
-    padding:20px;
-    float:left;
+    padding: 20px;
+    float: left;
 }
 
-.favorit-body h5{
-    color:black !important;
+.favorit-body h5 {
+    color: black !important;
     padding-bottom: 20px;
 }
 
-.favorit-body .far{
+.favorit-body .far {
     float: right;
     background-color: white;
     position: absolute;
     border-radius: 50px;
     border-color: white;
     padding: 10px;
-    bottom:22px;
+    bottom: 22px;
     right: 22px;
     font-weight: 300;
     text-align: center;
 }
 
 .favorit-body p {
-    color:black !important;
+    color: black !important;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 400px;
@@ -953,9 +1401,10 @@ input[type=radio]:checked + label {
     -webkit-box-orient: vertical;
 }
 
-.favorit img{
-    width:100%;
-    height:250px;
+.favorit img {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
     object-fit: cover;
     float: left;
     border-radius: 10px 10px 0px 0px;
@@ -1053,6 +1502,10 @@ input[type=radio]:checked + label {
     .kartica-img img {
         width: 100%;
     }
+    .pretrazivanje table {
+        margin-left: 30%;
+        width: 600px;
+    }
     /*-------footer------*/
     .footer {
         padding: 10px 20px;
@@ -1149,8 +1602,8 @@ input[type=radio]:checked + label {
     }
     .oglas-basic button {
         border-radius: 50px;
-        border-color: rgb(0, 153, 255);
-        color: rgb(0, 153, 255);
+        border-color: rgb(0, 195, 230);
+        color: rgb(0, 195, 230);
     }
     .oglas-post {
         padding-top: 80px;
@@ -1166,6 +1619,9 @@ input[type=radio]:checked + label {
     .room {
         padding-bottom: 150px;
     }
+    .room h2 {
+        margin-bottom: 20px;
+    }
     .karta2 {
         height: 520px;
         margin-left: 10px;
@@ -1174,14 +1630,16 @@ input[type=radio]:checked + label {
     .karta2 h2 {
         padding-bottom: 25px;
     }
+    .about-room {
+        margin-top: 0px;
+    }
     .about-room img {
         width: 100%;
-        border-radius: 30px;
-        padding: 10px;
-        margin: 10px;
+        border-radius: 80px;
+        padding: 40px;
     }
     .btn-container a {
-        background-color: rgb(0, 153, 255);
+        background-color: rgb(0, 195, 230);
         padding: 15px;
         font-size: 20px;
     }
@@ -1201,15 +1659,19 @@ input[type=radio]:checked + label {
         width: 400px;
         padding-bottom: 30px;
     }
+    .back {
+        padding: 10px 20px;
+    }
     .room-icon {
         margin-left: 850px;
+        padding: 10px 0px;
     }
     .room-icon i {
         color: #fff;
     }
     .room-icon button {
         border-radius: 50%;
-        background-color: rgb(0, 153, 255);
+        background-color: rgb(0, 195, 230);
     }
     .input-group-addon {
         background-color: rgb(224, 224, 224);
@@ -1218,22 +1680,43 @@ input[type=radio]:checked + label {
         text-align: center;
         border-radius: 0 10px 10px 0;
     }
+    .rev {
+        width: 900px;
+    }
     .review-box {
         border-width: 2px;
         border-style: solid;
         border-radius: 20px;
-        border-color: rgb(0, 153, 255);
+        border-color: rgb(0, 195, 230);
         background-color: rgba(255, 255, 255, 0.555);
-        margin: 10px;
+        margin: 20px;
     }
     .review-box img {
         height: 70px;
         width: 75px;
-        border-radius: 50%;
+        padding: 10px;
     }
-    .profili {
-        padding-top: 10px;
-        border-radius: 50%;
+    .calendar {
+        width: 500px;
+        padding-bottom: 10px;
+    }
+    .calendar td {
+        height: 4em;
+        width: 4em;
+        line-height: 4em;
+    }
+    .ime-mjeseca {
+        width: 500px;
+    }
+    .calendar a {
+        text-decoration: none;
+        padding: 0px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .calendar a:hover {
+        text-decoration: none;
+        box-shadow: none;
     }
     /*------kviz---------*/
     .kviz-pocetna {
@@ -1243,7 +1726,7 @@ input[type=radio]:checked + label {
         margin-bottom: 150px;
     }
     .kviz-pocetna h3 {
-        color: rgb(0, 153, 255);
+        color: rgb(0, 195, 230);
         font-size: 50px;
         padding-bottom: 30px;
         padding-top: 100px;
@@ -1263,7 +1746,6 @@ input[type=radio]:checked + label {
         font-size: 40px;
     }
     /*--------favoriti--------*/
-    
     .favoriti h2 {
         padding-top: 40px;
         padding-bottom: 30px;
@@ -1272,56 +1754,51 @@ input[type=radio]:checked + label {
         margin-bottom: 400px;
     }
     .rezultat {
-        color: rgb(0, 153, 255);
+        color: rgb(0, 195, 230);
         font-size: 50px;
         text-align: center;
         margin-bottom: 400px;
     }
     /*--------favoriti--------*/
-    .favoriti{
+    .favoriti {
         margin-bottom: 100px;
     }
     .favoriti h2 {
-        color: rgb(0, 153, 255);
+        color: rgb(0, 195, 230);
         padding: 20px 0px;
     }
-
-    .favorit{
-        float:left;
+    .favorit {
+        float: left;
         border-radius: 10px;
-        background-color: rgb(0, 153, 255);
+        background-color: rgb(0, 195, 230);
         margin-bottom: 50px;
         position: relative;
     }
-
-    .favorit-body{
+    .favorit-body {
         z-index: 1;
         overflow: hidden;
-        padding:20px;
-        float:left;
+        padding: 20px;
+        float: left;
     }
-
-    .favorit-body h5{
-        color:black !important;
+    .favorit-body h5 {
+        color: black !important;
         padding-bottom: 20px;
     }
-
-    .favorit-body .far{
+    .favorit-body .far {
         float: right;
         background-color: white;
         position: absolute;
         border-radius: 50px;
         border-color: white;
         padding: 10px;
-        top:22px !important;
+        top: 22px !important;
         bottom: 193px !important;
         right: 22px;
         font-weight: 300;
         text-align: center;
     }
-
     .favorit-body p {
-        color:black !important;
+        color: black !important;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 400px;
@@ -1329,10 +1806,10 @@ input[type=radio]:checked + label {
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
     }
-
-    .favorit img{
-        width:30%;
-        height:250px;
+    .favorit img {
+        width: 30%;
+        height: 250px;
+        -o-object-fit: cover;
         object-fit: cover;
         float: left;
         border-radius: 10px 0px 0px 10px;
