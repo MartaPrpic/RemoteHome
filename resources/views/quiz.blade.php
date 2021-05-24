@@ -4,11 +4,9 @@
 <body>
 <div class="header">
     <nav class="navbar navbar-expand-sm sticky-top">
-        <!--promjenila u container-fluid-->
         <div class="container-fluid ">
             <a class="navbar-brand" href="/">
-                <!--makla style komponentu iz img jer sam je prebacila u css-->
-                <!--u svaki li dodala nav-element klasu-->
+                
                 <img src="img/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -44,7 +42,7 @@
                         <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="fas fa-user-circle"></i>
                         </a>
-                        <!--dodala dropdown-menu-right komponentu-->
+                        
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="/favourites">Favourites</a>
@@ -70,7 +68,6 @@
             <div id="sections" class="interesi">
                 <div id="interests" style="display:block" class="quiz-card">
                     <h3>1. Choose your interests</h3>
-                    <!--dodala row i col-sm-2-->
                     <div class="row">
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c1" class="hidden"><label for="c1">Agriculture</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c2" class="hidden"><label for="c2">Farms</label></div>
@@ -78,7 +75,6 @@
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c4" class="hidden"><label for="c4">Climbing</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c5" class="hidden"><label for="c5">Bycicling</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c6" class="hidden"><label for="c6">Swimming</label></div>
-                        <!--promjenila u swimming jer je bilo 2 puta climbing-->
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c8" class="hidden"><label for="c8">Student life</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c7" class="hidden"><label for="c7">City lifestyle</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c9" class="hidden"><label for="c9">Beautiful nature</label></div>
@@ -108,7 +104,6 @@
                             <p style="float: right">Very</p>
                         </div>
                         <div class="">
-                            <!--dodala style width 100% na slidere-->
                             <div class="slider-container">
                                 <span class="bar"><span class="fill"></span></span>
                                 <input id="slider1" class="slider" type="range" min="0" max="2" value="1" style="width: 100%;">
@@ -185,8 +180,6 @@
         </div>
     </div>
 
-
-    <!--dodala footer-->
 
     <section class="footer">
         <div class="container">

@@ -3,11 +3,10 @@
 <body>
 <div class="header">
     <nav class="navbar navbar-expand-sm sticky-top">
-        <!--promjenila u container-fluid-->
+        
         <div class="container-fluid ">
             <a class="navbar-brand" href="/">
-                <!--makla style komponentu iz img jer sam je prebacila u css-->
-                <!--u svaki li dodala nav-element klasu-->
+                
                 <img src="img/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -34,7 +33,7 @@
                         <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="fas fa-user-circle"></i>
                         </a>
-                        <!--dodala dropdown-menu-right komponentu-->
+                        
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="/favourites">Favourites</a>
@@ -53,6 +52,29 @@
         </div>
     </nav>
 </div>
+
+<form class="pretrazivanje">
+  <table cellspacing="0" cellpadding="0">
+    <colgroup>
+      <col style="width:70%">
+<!--       <col style="width:10%">
+      <col style="width:10%">
+      <col style="width:5%"> -->
+    </colgroup>  
+    <tr>
+      <td><input type="text" name="search-td" placeholder='Search location' class="search-td" maxlength="65"></td>
+      
+      <td><button type="button" name="dates" class="date-button date-field"><i class="far fa-calendar-alt"></i>Date</td>
+      <td>
+        
+      <td><button type="button" name="guests" class="guests-button"><i class="fas fa-users"></i>Guests</td>
+      <td>
+        <button type="submit" class="search-button"><i class="material-icons search-icon"><i class="fas fa-search"></i></i></button>
+      </td>
+    </tr>
+  </table>
+  </form>
+
 <script type="text/javascript">var oglasi = <?php echo json_encode($listings); ?>;
 </script>
 

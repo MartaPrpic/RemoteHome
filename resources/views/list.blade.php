@@ -2,11 +2,10 @@
 @section("content")
 <div class="header">
     <nav class="navbar navbar-expand-sm sticky-top">
-        <!--promjenila u container-fluid-->
+        
         <div class="container-fluid ">
             <a class="navbar-brand" href="/">
-                <!--makla style komponentu iz img jer sam je prebacila u css-->
-                <!--u svaki li dodala nav-element klasu-->
+                
                 <img src="/img/logo.png" alt="Logo">
             </a>
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -42,7 +41,7 @@
                         <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="fas fa-user-circle"></i>
                         </a>
-                        <!--dodala dropdown-menu-right komponentu-->
+                        
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
                                 <a class="dropdown-item" href="/favourites">Favourites</a>
@@ -61,9 +60,9 @@
         </div>
     </nav>
 </div>
-    <!--dodala div za sliku-->
+    
     <section class="oglas">
-        <!--prebacila u container-fluid-->
+        
         <div class="container-fluid">
             <h4> Host Your Home</h4>
             <form method="POST" action="list" enctype="multipart/form-data" id="list">
@@ -105,7 +104,7 @@
                             <div class="oglas-basic">
                                 <input type="text" class="form-control" name="price" id="price" placeholder="Cijena (EUR)">
                             </div>
-                            <!--makla div za import slike-->
+                            
                             <div class="oglas-basic">
 
                                 <div class="form-group" style="text-align: left;">
@@ -172,7 +171,7 @@
                                     <input type="checkbox" name="additionalinfo[]" value="Pet friendly" class="hidden" id="cbb8"><label for="cbb8">Pet friendly</label>
                                 </div>
 
-                                <!--klase botuna prominila u btn-outline-->
+                                
                                 <div class="oglas-basic">
                                     <h5>Expences included in price:</h5>
                                     <input type="checkbox" name="expences[]" value="all" class="hidden" id="cb"><label for="cb">all</label>
