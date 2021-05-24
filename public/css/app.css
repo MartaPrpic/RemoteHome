@@ -52,10 +52,10 @@
     width: 100%;
     align-items: center;
     z-index: 1;
-    background-image: url('/img/obala2.jpg');
+    background-image: url('/img/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 82vh;
 }
 
 .pretrazivanje table {
