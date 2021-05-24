@@ -18,7 +18,7 @@
                     <li class="nav-item active nav-element">
                         <a class="nav-link" href="/accommodation">Accommodation</a>
                     </li>
-                    <li class="nav-item dropdown nav-element">
+                   <!-- <li class="nav-item dropdown nav-element">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                   Language
                 </a>
@@ -26,7 +26,7 @@
                             <a class="dropdown-item" href="#">Croatian <img src="img/hrv.png" style="width: 15px; height: 15px;"></a>
                             <a class="dropdown-item" href="#">English  <img src="img/eng.png" style="width: 15px; height: 15px;"></a>
                         </div>
-                    </li>
+                    </li> -->
                     <li class="nav-item dropdown nav-element">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                   Currency
