@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://js.arcgis.com/4.19/@arcgis/core/assets/esri/themes/light/main.css">
     <script type="module" src="/js/map.js"></script>
     <script defer src="/js/app.js"></script>
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 </head>
 <body>
     @yield('content')
