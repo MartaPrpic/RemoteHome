@@ -175,7 +175,7 @@ table {
     display: inline-block;
     line-height: 80px;
     font-family: inherit;
-    background: #ffe151;
+    background: #961EE1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -505,7 +505,7 @@ textarea {
     -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
-    padding: 16px 20px;
+    padding: 10px 20px;
     padding-bottom: 10px;
     background: #fff;
     -webkit-border-radius: 10px;
@@ -567,7 +567,7 @@ textarea {
 
 .input--style-1 {
     font-size: 18px;
-    padding: 9px 0;
+    padding: 5px 0;
     color: #666;
     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
 }
@@ -700,7 +700,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .navbar a:hover {
-    color: rgb(0, 50, 83);
+    color: #961EE1;
 }
 
 .navbar-nav {
@@ -941,8 +941,8 @@ td {
 }
 
 .categories button:hover {
-    background-color: rgb(0, 50, 83);
-    border-color: rgb(0, 50, 83);
+    background-color: #961EE1;
+    border-color: #961EE1;
     color: white;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.466);
 }
@@ -960,7 +960,7 @@ td {
 }
 
 .popular h2 {
-    color: rgb(0, 195, 230);
+    color: #961EE1;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -1338,6 +1338,10 @@ input[type=radio]:checked+label {
     padding: 5px
 }
 
+.p-1 {
+    color: #961EE1
+}
+
 .filter-acc {
     display: none;
     padding: 0;
@@ -1535,6 +1539,10 @@ input[type=radio]:checked+label {
     border-radius: 30px;
     padding: 5px;
     margin-bottom: 10px;
+}
+
+.about-room h3 {
+    color: #961EE1;
 }
 
 .basic-lista {
@@ -1854,6 +1862,18 @@ table {
     border: none;
 }
 
+#food label:hover {
+    background-color: transparent;
+}
+
+#food input[type="checkbox"]:checked+label {
+    background-color: transparent;
+}
+
+.food:hover {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.322);
+}
+
 .kviz-pocetna {
     padding-top: 50px;
     text-align: center;
@@ -1868,14 +1888,14 @@ table {
 .kviz-pocetna button {
     background-color: rgb(0, 195, 230);
     color: #fff;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     padding: 5px 20px;
     font-size: 20px;
 }
 
 .kviz-pocetna button:hover {
-    background-color: rgb(0, 50, 83);
+    background-color: #961EE1;
     color: #fff;
 }
 
@@ -1919,7 +1939,7 @@ table {
 }
 
 .interesi h3 {
-    color: rgb(0, 195, 230);
+    color: #961EE1;
     padding-top: 20px;
 }
 
@@ -2397,7 +2417,6 @@ table {
         margin-bottom: 150px;
     }
     .kviz-pocetna h3 {
-        color: rgb(0, 195, 230);
         font-size: 50px;
         padding-bottom: 30px;
         padding-top: 100px;
