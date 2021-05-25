@@ -587,9 +587,10 @@ input[type=checkbox]+label {
     padding: 5px 20px;
     text-align: center;
     border: 1px solid rgb(0, 195, 230);
-    border-radius: 50px;
+    border-radius: 10px;
     margin-bottom: 5px;
     color: rgb(0, 195, 230);
+    background-color: white;
 }
 
 input[type=checkbox]:hover+label {
@@ -609,7 +610,7 @@ input[type=radio]+label {
     padding: 5px 20px;
     text-align: center;
     border: 1px solid rgb(0, 195, 230);
-    border-radius: 50px;
+    border-radius: 10px;
     margin-bottom: 5px;
     color: rgb(0, 195, 230);
 }
@@ -644,30 +645,18 @@ input[type=radio]:checked+label {
 
 /*-----accommodation page-----*/
 
+#mobile-filter {
+    background-color: rgba(238, 238, 238, 0.5);
+    margin-top: 10px;
+}
+
 #mobile-filter input[type=checkbox]+label {
-    width: 120px;
-    height: 50px;
     font-size: 10px;
-}
-
-#mobile-filter input[type=radio]+label {
-    border-color: transparent;
-    background-color: transparent;
-    padding: 0px;
-}
-
-#mobile-filter input[type=radio]:hover+label {
-    color: rgb(0, 195, 230);
-}
-
-#mobile-filter input[type=radio]:checked+label {
-    color: rgb(0, 195, 230);
-    font-weight: bold;
-    font-style: italic;
 }
 
 #mobile-filter h6 {
     font-size: 15px;
+    margin-top: 0.5em;
 }
 
 #mobile-filter ul {
@@ -1536,6 +1525,13 @@ table {
         padding-left: 110px;
     }
     /*----accommodation page----*/
+    #mobile-filter {
+        margin-right: 50px;
+        padding-bottom: 100px;
+        margin-top: 0px;
+        padding-right: 30px;
+        padding-left: 20px;
+    }
     .srce {
         margin: 0 20px;
     }
@@ -1759,7 +1755,6 @@ table {
         text-align: center;
         margin-bottom: 400px;
     }
-    /*--------favoriti--------*/
     .favoriti {
         margin-bottom: 100px;
     }

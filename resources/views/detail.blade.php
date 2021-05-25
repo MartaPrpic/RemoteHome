@@ -59,7 +59,7 @@
     </script>
 
     <div class="container room-container">
-
+<!--
         <div class="row">
             <div class="back">
                 <a href="/accommodation"><button type="button" class="btn btn-outline-primary"><i class="fas fa-angle-double-left"></i> back</button></a>
@@ -98,6 +98,7 @@
                     @endif
                 </div>
             </div>
+            -->
 
             <div class="about-room">
                 <div>

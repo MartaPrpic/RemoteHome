@@ -73,24 +73,24 @@
         <div>
             <h5 class="p-1 border-bottom">Category</h5>
             <ul>
-                <li><input type="checkbox" name="categoryCheck" value="House" class="hidden" id="cb"><label for="cb"><i class="fas fa-home"></i>
-                        <h6>HOUSE</h6>
+                <li><input type="checkbox" name="categoryCheck" value="House" class="hidden" id="cb"><label for="cb">
+                        <h6><i class="fas fa-home"></i> HOUSE</h6>
+                    </label> <input type="checkbox" name="categoryCheck" value="Flat" class="hidden" id="cb1"><label for="cb1">
+                        <h6><i class="fas fa-building"></i> FLAT</h6>
                     </label></li>
-                <li><input type="checkbox" name="categoryCheck" value="Flat" class="hidden" id="cb1"><label for="cb1"><i class="fas fa-building"></i>
-                        <h6>FLAT</h6>
+
+                <li><input type="checkbox" name="categoryCheck" value="Room" class="hidden" id="cb2"><label for="cb2">
+                        <h6><i class="fas fa-bed"></i> ROOM</h6>
+                    </label> <input type="checkbox" name="categoryCheck" value="Co-living" class="hidden" id="cb3"><label for="cb3">
+                        <h6><i class="fas fa-users"></i> CO-LIVING</h6>
                     </label></li>
-                <li><input type="checkbox" name="categoryCheck" value="Room" class="hidden" id="cb2"><label for="cb2"><i class="fas fa-bed"></i>
-                        <h6>ROOM</h6>
+
+                <li><input type="checkbox" name="categoryCheck" value="Boat" class="hidden" id="cb4"><label for="cb4">
+                        <h6><i class="fas fa-ship"></i> BOAT</h6>
+                    </label> <input type="checkbox" name="categoryCheck" value="Rustic" class="hidden" id="cb5"><label for="cb5">
+                        <h6><i class="fas fa-tractor"></i> FARM</h6>
                     </label></li>
-                <li><input type="checkbox" name="categoryCheck" value="Co-living" class="hidden" id="cb3"><label for="cb3"><i class="fas fa-users"></i>
-                        <h6>CO-LIVING</h6>
-                    </label></li>
-                <li><input type="checkbox" name="categoryCheck" value="Boat" class="hidden" id="cb4"><label for="cb4"><i class="fas fa-ship"></i>
-                        <h6>BOAT</h6>
-                    </label></li>
-                <li><input type="checkbox" name="categoryCheck" value="Rustic" class="hidden" id="cb5"><label for="cb5"><i class="fas fa-tractor"></i>
-                        <h6>FARM</h6>
-                    </label></li>
+
             </ul>
         </div>
         <div>
@@ -98,22 +98,52 @@
             <p class="mb-2">Price</p>
             <ul class="list-group">
                 <li class="list-group-item list-group-item-action mb-2 rounded"><input id="slider1" class="slider" type="range" min="0" max="2" value="1" style="width: 100%;"></li>
-                <li><p style="float: left;" >10 EUR </p><p style="float: right;" >2000 EUR </p></li>
-                
+                <li>
+                    <p style="float: left;">10 EUR </p>
+                    <p style="float: right;">2000 EUR </p>
+                </li>
+
             </ul>
         </div>
         <div>
-            <h6>Bedroom</h6>
-            <form class="ml-md-2">
-                <div class="form-inline p-sm-2 my-1"> <input type="radio" name="type" id="T1"> <label for="T1" class="pl-1 pt-sm-0 pt-1">T1</label> </div>
-                <div class="form-inline p-sm-2 my-1"> <input type="radio" name="type" id="T2"> <label for="T2" class="pl-1 pt-sm-0 pt-1">T2</label> </div>
-                <div class="form-inline p-md-2 p-sm-1"> <input type="radio" name="type" id="T3"> <label for="T3" class="pl-1 pt-sm-0 pt-1">T3</label> </div>
-                <div class="form-inline p-sm-2 my-1"> <input type="radio" name="type" id="T4"> <label for="T4" class="pl-1 pt-sm-0 pt-1">T4</label> </div>
-                <div class="form-inline p-md-2 p-sm-1"> <input type="radio" name="type" id="T5+"> <label for="T5+" class="pl-1 pt-sm-0 pt-1">T5+</label> </div>
-            </form>
+            <h6 class="p-1">Bedroom</h6>
+            <select name="bedrooms" id="bedrooms" class="custom-select ml-md-2">
+                <option selected>Bedrooms</option>
+                <option value="0">T0</option>
+                <option value="1">T1</option>
+                <option value="2">T2</option>
+                <option value="3">T3</option>
+                <option value="4">T4</option>
+                <option value="5+">T5+</option>
+            </select>
+        </div>
+        <div>
+            <h6 class="p-1">Floor</h6>
+            <select name="floor" id="floor" class="custom-select ml-md-2">
+                <option selected>Floor</option>
+                <option value="Basement">Basement</option>
+                <option value="Semi-basement">Semi-basement</option>
+                <option value="Ground">Ground</option>
+                <option value="Middle">Middle</option>
+                <option value="Top">Top</option>
+                <option value="Attic">Attic</option>
+            </select>
+        </div>
+        <div>
+        <h6 class="p-1">Additional information:</h6>
+            <ul>
+                <li><input type="checkbox" name="additionalinfo[]" value="Terrace" class="hidden" id="cbb"><label for="cbb"><h6>Terrace</h6></label>
+                <input type="checkbox" name="additionalinfo[]" value="Elevator" class="hidden" id="cbb1"><label for="cbb1"><h6>Elevator</h6></label></li>
+                <li><input type="checkbox" name="additionalinfo[]" value="Storage room" class="hidden" id="cbb2"><label for="cbb2"><h6>Storage room</h6></label>
+                <input type="checkbox" name="additionalinfo[]" value="Air conditioning" class="hidden" id="cbb3"><label for="cbb3"><h6>Air conditioning</h6></label></li>
+                <li><input type="checkbox" name="additionalinfo[]" value="Garden" class="hidden" id="cbb5"><label for="cbb5"><h6>Garden</h6></label>
+                <input type="checkbox" name="additionalinfo[]" value="Pool" class="hidden" id="cbb6"><label for="cbb6"><h6>Pool</h6></label></li>
+                <li><input type="checkbox" name="additionalinfo[]" value="Parking spot" class="hidden" id="cbb7"><label for="cbb7"><h6>Parking spot</h6></label>
+                <input type="checkbox" name="additionalinfo[]" value="Pet friendly" class="hidden" id="cbb8"><label for="cbb8"><h6>Pet friendly</h6></label></li>
+            </ul>
         </div>
     </div>
-    
+
     <section class="smjestaji">
         <div class="container">
             <div class="row">
