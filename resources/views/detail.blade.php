@@ -190,7 +190,7 @@
                             <div id="map" class="container tab-pane fade"><br>
                                 <h3>Location</h3>
                                 <div class="row">
-                                    <!--promijenila sadržaj diva, dodala botune-->
+                                    
                                     <div class="md-6 filter">
                                         <input type="checkbox" name="mapfilter[]" value="Restaurant" class="hidden" id="cbm"><label for="cbm">Restaurant</label>
                                         <input type="checkbox" name="mapfilter[]" value="Groceries" class="hidden" id="cbm1"><label for="cbm1">Groceries</label>

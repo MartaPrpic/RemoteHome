@@ -52,10 +52,10 @@
     width: 100%;
     align-items: center;
     z-index: 1;
-    background-image: url('/img/obala2.jpg');
+    background-image: url('/img/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 82vh;
 }
 
 .pretrazivanje table {
@@ -1034,12 +1034,13 @@ input[type=radio]:checked+label {
 
 .calendar {
     width: 300px;
-    background: #f9f9f9;
+    background-color: rgba(238, 238, 238, 0.5);
     color: #0e171c;
     display: grid;
     margin: 0;
     padding-bottom: 40px;
     place-items: center;
+    border-radius: 20px;
 }
 
 .calendar h2 {
