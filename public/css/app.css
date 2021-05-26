@@ -175,7 +175,7 @@ table {
     display: inline-block;
     line-height: 80px;
     font-family: inherit;
-    background: #961EE1;
+    background: #f6931f;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -674,7 +674,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .card-7 .card-body {
-    padding: 0px;
+    padding: 0 20px;
     background-color: transparent;
 }
 
@@ -701,7 +701,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .navbar a:hover {
-    color: #961EE1;
+    color: #f6931f;
 }
 
 .navbar-nav {
@@ -942,8 +942,8 @@ td {
 }
 
 .categories button:hover {
-    background-color: #961EE1;
-    border-color: #961EE1;
+    background-color: #f6931f;
+    border-color: #f6931f;
     color: white;
     box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.466);
 }
@@ -961,7 +961,7 @@ td {
 }
 
 .popular h2 {
-    color: #961EE1;
+    color: #f6931f;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -1340,7 +1340,8 @@ input[type=radio]:checked+label {
 }
 
 .p-1 {
-    color: #961EE1
+    color: #f6931f;
+    font-weight: 580;
 }
 
 .filter-acc {
@@ -1421,6 +1422,18 @@ input[type=radio]:checked+label {
 
 .filter {
     padding-top: 20px;
+}
+
+#applyFilter,
+#resetFilter {
+    background-color: #f6931f;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 #categories {
@@ -1543,7 +1556,7 @@ input[type=radio]:checked+label {
 }
 
 .about-room h3 {
-    color: #961EE1;
+    color: #f6931f;
 }
 
 .basic-lista {
@@ -1630,6 +1643,10 @@ input[type=radio]:checked+label {
     padding-bottom: 15px;
 }
 
+.btn-container {
+    justify-content: center;
+}
+
 .btn-container a {
     background-color: rgb(0, 195, 230);
     padding: 10px;
@@ -1638,6 +1655,16 @@ input[type=radio]:checked+label {
 
 .btn-container a:hover {
     box-shadow: 0px -8px 5px rgba(0, 0, 0, 0.322);
+}
+
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .nav-room a:hover {
@@ -1859,20 +1886,42 @@ table {
 
 /*------kviz---------*/
 
+.food-container {
+    height: 200px;
+}
+
+.food {
+    height: 200px;
+    width: 290px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 #food label {
     border: none;
 }
 
-#food label:hover {
+#food input[type="checkbox"]:checked+label {
+    background-color: transparent;
+    box-shadow: 6px 6px 15px 0 rgba(0, 195, 230, 0.5);
+}
+
+#food input[type="checkbox"]:hover+label {
     background-color: transparent;
 }
 
-#food input[type="checkbox"]:checked+label {
+#food input[type="checkbox"]+label {
     background-color: transparent;
+    padding: 0px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 .food:hover {
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.322);
+    box-shadow: 6px 6px 15px 0 rgba(0, 195, 230, 0.4);
+    background-color: transparent;
 }
 
 .kviz-pocetna {
@@ -1896,14 +1945,14 @@ table {
 }
 
 .kviz-pocetna button:hover {
-    background-color: #961EE1;
+    background-color: #f6931f;
     color: #fff;
 }
 
 .animacija {
     height: 300px;
     width: 300px;
-    margin-left: 35px;
+    margin-left: 20px;
     margin-bottom: 100px;
 }
 
@@ -1940,8 +1989,9 @@ table {
 }
 
 .interesi h3 {
-    color: #961EE1;
+    color: #f6931f;
     padding-top: 20px;
+    font-weight: 600;
 }
 
 .interesi {
@@ -2001,18 +2051,6 @@ table {
 .area1 {
     padding: 10px;
     font-size: 18px;
-}
-
-.food-container {
-    height: 200px;
-}
-
-.food {
-    height: 200px;
-    width: 300px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    border-radius: 50px;
 }
 
 .rezultat {
