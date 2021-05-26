@@ -4,6 +4,7 @@ import Point from "https://js.arcgis.com/4.19/@arcgis/core/geometry/Point.js";
 import Graphic from "https://js.arcgis.com/4.19/@arcgis/core/Graphic.js";
 import request from "https://js.arcgis.com/4.19/@arcgis/core/request.js";
 import Popup from "https://js.arcgis.com/4.19/@arcgis/core/PopupTemplate.js";
+import FeatureLayer from "https://js.arcgis.com/4.19/@arcgis/core/layers/FeatureLayer.js";
 
 let viewDiv= document.getElementById("viewDiv");
 let viewDiv2 = document.getElementById("viewDiv2");
@@ -73,8 +74,6 @@ const map = new Map({
     basemap: "topo-vector"
     
 });
-
-
 
 const view = new MapView({
 
@@ -146,6 +145,13 @@ const view = new MapView({
     map: map 
 
 });
+
+const layer = new FeatureLayer({
+    url: "https://gdi-tp.gdi.net/server/rest/services/Students/POI/MapServer/0"
+});
+
+console.log(layer);
+map.layers.add(layer);
 
 geocodeAdresses_id(oglas);
 

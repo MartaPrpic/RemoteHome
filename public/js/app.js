@@ -1852,39 +1852,127 @@ if (category) {
   });
 }
 
-var categories = document.getElementById('categories');
-
+var categories = Array.from(document.getElementsByName('categoryCheck'));
+var priceSlider = document.getElementById('slider-range');
+var applyFiler = document.getElementById("applyFilter");
 if (categories) {
-  var funkcija = function funkcija() {
-    oglasi.forEach(function (oglas) {
-      return oglas.style.display = "block";
-    });
-    var dinamicList = [];
-    categoryCheck.forEach(function (check) {
-      console.log(check.checked);
-
-      if (check.checked == true) {
-        oglasi.forEach(function (oglas) {
-          console.log(oglas.id, check.value);
-          oglas.style.display = "none";
-
-          if (oglas.id == check.value | oglas.firstElementChild.id == check.value) {
-            dinamicList.push(oglas);
-          }
-        });
-      }
-    });
-    dinamicList.forEach(function (match) {
-      return match.style.display = "block";
-    });
-    console.log(dinamicList);
-  };
-
   var oglasi = Array.from(document.getElementsByName('oglas'));
   var categoryCheck = Array.from(document.getElementsByName('categoryCheck'));
-  categoryCheck.forEach(function (check) {
-    check.addEventListener('click', funkcija);
-  });
+  var cbsList = Array.from(document.getElementsByName("additionalinfo[]"));
+  var bedroomsChecked = document.getElementById("bedrooms");
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 100,
+      max: 2000,
+      step: 100,
+      values: [ 100, 2000 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+
+  var filter = function(){
+              /*unos korisnika*/
+    var pricesStr = $('#amount').val().split(" - ");
+    var lower_price = Number(pricesStr[0].substr(1));
+    var higher_price = Number(pricesStr[1].substr(1));
+    var bedroomChecked = bedroomsChecked.options[bedroomsChecked.selectedIndex].value;
+    var selectedLista = [];
+
+    cbsList.forEach(function(cb){
+      if(cb.checked){
+        selectedLista.push(cb.value);
+      }
+    })
+    console.log(`lower price selected: ${lower_price}, higher price selected ${higher_price}`);
+    console.log(`bedrooms checked: ${bedroomChecked}`);
+    console.log(`Additional info selection: ${selectedLista}`);
+
+             /*podatci o oglasima*/
+    var prices = Array.from(document.getElementsByName('price'));
+    var bedroomsOglasi =  Array.from(document.getElementsByName("sobe"));
+    var additional = Array.from(document.getElementsByName("additional"));
+    var oglasiLista = [];
+    var cijeneLista = [];
+
+    additional.forEach(function(oglas, i){
+      oglas.id = `oglas${i}`;
+      var additionalLista = [];
+      var liList = Array.from(oglas.children);
+      liList.forEach(function(li){
+        additionalLista.push(li.textContent);
+      })
+      oglasiLista.push(additionalLista);
+    })
+
+    bedroomsOglasi.forEach(function(oglas, i){
+      oglas.id=`soba${i}`;
+    })
+
+    prices.forEach(function(oglas, i){
+      oglas.id=`price${i}`;
+      var priceStrings = oglas.textContent.split(" ");
+      var price = Number(priceStrings[0]);
+      cijeneLista.push(price);
+    })
+
+    function provjeravaj(){
+      oglasi.forEach(function(oglas,i){
+        oglas.style.display ="block";
+
+        var bedrooms = document.getElementById(`soba${i}`).textContent;
+        var price = cijeneLista[i];
+        var additionalInfo = oglasiLista[i];
+        var kategorije = categoryCheck.filter(check => !(check.checked)).map(check => check.value);
+
+
+        console.log(`Oglas: ${i}, Bedrooms: ${bedrooms}, price: ${price}, additionalInfo: ${additionalInfo}`);
+        console.log(kategorije);
+
+        if(6>kategorije.length>0){
+          if(kategorije.includes(oglas.id) | kategorije.includes(oglas.firstElementChild.id)) {
+            oglas.style.display = "none";
+          }
+        }
+        
+        if(price>higher_price || price<lower_price || bedrooms!=bedroomChecked && bedroomChecked != "Bedrooms"){
+          
+          console.log(oglas);
+          oglas.style.display ="none";
+          
+        }
+
+        if (selectedLista.length != 0){
+          var k = 0;
+          selectedLista.forEach(function(unosKorisnika){
+            additionalInfo.forEach(function(stavkaOglasa){
+              if(unosKorisnika == stavkaOglasa){
+                k++;
+              }
+            })
+          })
+          if(k==0){
+            oglas.style.display = "none";
+          }
+        }
+      
+      })
+    }
+
+    provjeravaj();
+  }
+
+  applyFilter.addEventListener('click', filter);
+  document.getElementById("resetFilter").addEventListener('click', function(){
+    oglasi.forEach(function(oglas){oglas.style.display = "block"});
+    categoryCheck.forEach(check => check.checked = false);
+    cbsList.forEach(cb => cb.checked = false);
+    bedroomsChecked.selectedIndex = 0;
+  })
 }
 
 /***/ }),

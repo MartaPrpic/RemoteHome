@@ -95,15 +95,21 @@
         </div>
         <div>
             <h5 class="p-1 border-bottom">Filter By</h5>
-            <p class="mb-2">Price</p>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-action mb-2 rounded"><input id="slider1" class="slider" type="range" min="0" max="2" value="1" style="width: 100%;"></li>
+            <p><label for="amount">Price range:</label>
+                <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+            <div id="slider-range"></div>
+
+            <!--<p class="mb-2">Price</p>
+            
+            -<ul class="list-group">
+                <li class="list-group-item list-group-item-action mb-2 rounded"><input id="priceSlider" class="slider" type="range" min="10" max="2000" value="1000" step="100" style="width: 100%;"></li>
                 <li>
                     <p style="float: left;">10 EUR </p>
                     <p style="float: right;">2000 EUR </p>
                 </li>
 
-            </ul>
+            </ul>-->
         </div>
         <div>
             <h6 class="p-1">Bedroom</h6>
@@ -142,6 +148,10 @@
                 <input type="checkbox" name="additionalinfo[]" value="Pet friendly" class="hidden" id="cbb8"><label for="cbb8"><h6>Pet friendly</h6></label></li>
             </ul>
         </div>
+        <div>
+            <input type="button" id="applyFilter" value="Apply Filter"></input>
+            <input type="button" id="resetFilter" value="Reset"></input>
+        </div>
     </div>
 
     <section class="smjestaji">
@@ -166,7 +176,13 @@
                                     <h6>{{$listing['name']}}</h6>
                                 </a>
                                 <div class="srce">
-                                    <h5 style="font-style:italic;">{{$listing['price']}} EUR</h5>
+                                <ul name="additional" style="display:none;">
+                                            @foreach($listing['additionalinfo'] as $additional)
+                                            <li>{{$additional}}</li>
+                                            @endforeach
+                                </ul>
+                                    <span name="sobe" id="" style="display:none;">{{$listing['bedrooms']}}</span>
+                                    <h5 name="price" style="font-style:italic;">{{$listing['price']}} EUR</h5>
                                     <div id="heart">
                                         <form action="/favourite" method="POST" style="display:inline">
                                             @csrf
