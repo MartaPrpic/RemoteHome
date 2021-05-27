@@ -1542,18 +1542,80 @@ input[type=radio]:checked+label {
 
 /*-----room page-----*/
 
+@media (min-width: 768px) {
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        transform: translate3d(0, 0, 0);
+    }
+    /* last visible item + 1 */
+    .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-next.carousel-item-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        transform: translate3d(100%, 0, 0);
+        display: block;
+        visibility: visible;
+    }
+}
+
 .about-room {
     align-content: center;
     margin-top: 15px;
     padding: 20px;
 }
 
-.about-room img {
+
+/*.about-room img {
     width: 100%;
     border-radius: 30px;
     padding: 5px;
     margin-bottom: 10px;
 }
+*/
 
 .about-room h3 {
     color: #f6931f;
@@ -1645,6 +1707,7 @@ input[type=radio]:checked+label {
 
 .btn-container {
     justify-content: center;
+    margin-top: 20px;
 }
 
 .btn-container a {
@@ -1655,10 +1718,6 @@ input[type=radio]:checked+label {
 
 .btn-container a:hover {
     box-shadow: 0px -8px 5px rgba(0, 0, 0, 0.322);
-}
-
-.nav {
-    flex-wrap: nowrap;
 }
 
 .nav-tabs {
@@ -1737,13 +1796,14 @@ input[type=radio]:checked+label {
 .room h2 {
     color: rgb(0, 195, 230);
     margin-bottom: 10px;
+    padding-left: 30px;
 }
 
 
 /* ---------- CALENDAR ---------- */
 
 .calendar {
-    width: 300px;
+    width: 100%;
     background-color: rgba(238, 238, 238, 0.5);
     color: #0e171c;
     display: grid;
@@ -1753,8 +1813,13 @@ input[type=radio]:checked+label {
     border-radius: 20px;
 }
 
+#available {
+    padding: 0px;
+}
+
 .calendar h2 {
     text-transform: uppercase;
+    padding: 0px;
 }
 
 .calendar a {
@@ -2363,15 +2428,20 @@ table {
     .about-room {
         margin-top: 0px;
     }
+    /*
     .about-room img {
         width: 100%;
         border-radius: 80px;
         padding: 40px;
     }
+    */
     .btn-container a {
         background-color: rgb(0, 195, 230);
-        padding: 15px;
+        padding: 15px 80px;
         font-size: 20px;
+    }
+    .btn-container {
+        margin-top: 30px;
     }
     .basic-lista ul {
         justify-content: center;
@@ -2386,7 +2456,6 @@ table {
         text-decoration: none;
     }
     .tab-content {
-        width: 400px;
         padding-bottom: 30px;
     }
     .back {
