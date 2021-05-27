@@ -15,7 +15,9 @@ use App\Http\Controllers\ListingsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/search', function () {
+    return view('search');
+});
 Route::get('/login', function () {
     return view('login');
 });
@@ -38,3 +40,6 @@ Route::get("/favourites", [ListingsController::class, 'favouriteList']);
 Route::get("/removefav/{id}", [ListingsController::class, 'removeFav']);
 Route::get("/unheart/{id}", [ListingsController::class, 'unHeart']);
 Route::get("/", [ListingsController::class, 'getAddress']);
+
+Route::get('login/google', [UserController::class, 'redirectToProvider']);
+Route::get('login/google/callback', [UserController::class, 'handleProviderCallback']);

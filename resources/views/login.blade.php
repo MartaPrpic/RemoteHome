@@ -49,7 +49,7 @@
                         <span class="span-or">or</span>
                     </div>
                     <div class="facebook"> <button type="button" class="btn btn-primary btn-block "><i class="fab fa-facebook-f"></i> Continue with Facebook</button></div>
-                    <div class="google"><button type="button" class="btn btn-primary btn-block "><i class="fab fa-google"></i> Continue with Google</button></div>
+                    <div class="google"><a href="{{url('/login/google')}}"><button type="button" class="btn btn-primary btn-block "><i class="fab fa-google"></i> Continue with Google</button></a></div>
                 </div>
             
         </div>
