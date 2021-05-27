@@ -150,9 +150,27 @@ const layer = new FeatureLayer({
     url: "https://gdi-tp.gdi.net/server/rest/services/Students/POI/MapServer/0"
 });
 
-console.log(layer);
-map.layers.add(layer);
 
+
+function closestWihinRadius(){
+
+    var query = layer.createQuery();
+    query.where = "1=1";
+    query.outFields = ["*"];
+    query.returnGeomatry = true;
+    /*query.distance = 0.5;
+    query.geometry = new Point(45.81444, 15.97798);
+    query.units = "miles";
+    query.spatialRelationship = "intersects";  // this is the default
+    query.returnGeometry = true;
+    */
+    layer.queryFeatures(query).then(function(res){
+        console.log(res.features);
+    });
+};
+
+map.layers.add(layer);
+closestWihinRadius();
 geocodeAdresses_id(oglas);
 
 }
