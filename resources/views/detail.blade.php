@@ -58,8 +58,8 @@
         var oglas = "<?php echo $listing['address'] ?>";
     </script>
 
-    <div class="container room-container">
-<!--
+    <div class="container-fluid room-container">
+        <!--
         <div class="row">
             <div class="back">
                 <a href="/accommodation"><button type="button" class="btn btn-outline-primary"><i class="fas fa-angle-double-left"></i> back</button></a>
@@ -100,18 +100,19 @@
             </div>
             -->
 
-            <div class="about-room">
-                <div>
+        <div class="about-room">
+            <!--
+                    <div>
                     <div id="demo" class="carousel slide" data-ride="carousel">
 
-                        <!-- Indicators -->
+                         --Indicators--
                         <ul class="carousel-indicators">
                             <li data-target="#demo" data-slide-to="0" class="active"></li>
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
                         </ul>
 
-                        <!-- The slideshow -->
+                         --The slideshow --
                         <div class="carousel-inner">
                             @foreach(json_decode($listing['images']) as $image)
                             <div class="carousel-item {{$image == head(json_decode($listing['images'])) ? 'active' : ''}}">
@@ -120,7 +121,7 @@
                             @endforeach
                         </div>
 
-                        <!-- Left and right controls -->
+                        -- Left and right controls --
                         <a class="carousel-control-prev" href="#demo" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
@@ -130,218 +131,253 @@
 
                     </div>
                 </div>
-                <div about-room>
-                    <div class="btn-container">
-                        <ul class="nav nav-tabs nav-room" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#info"><i class="fas fa-info-circle"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#basic">Basic</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#map">Map</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#available">Available</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
-                            </li>
-                        </ul>
+                -->
+
+            <div class="container-fluid">
+                <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="12000">
+                    <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
+                        <div class="carousel-item col-md-3 active">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400/000/fff?text=1" alt="slide 1">
+                        </div>
+                        <div class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=2" alt="slide 2">
+                        </div>
+                        <div class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=3" alt="slide 3">
+                        </div>
+                        <div class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=4" alt="slide 4">
+                        </div>
+                        <div class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=5" alt="slide 5">
+                        </div>
+                        <div class="carousel-item col-md-3">
+                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=6" alt="slide 6">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left fa-lg text-muted"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right fa-lg text-muted"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div about-room>
+                <div class="btn-container">
+                    <ul class="nav nav-tabs nav-room" role="tablist" style="flex-wrap: nowrap">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#info"><i class="fas fa-info-circle"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#basic">Basic</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#map">Map</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#available">Available</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
+                        </li>
+                    </ul>
 
 
-                        <div class="tab-content">
-                            <div id="info" class="container tab-pane active"><br>
-                                <h3>{{$listing['name']}}</h3>
-                                <p>{{$listing['description']}}</p>
-                                <p>Price/month: {{$listing['price']}} €</p>
+                    <div class="tab-content">
+                        <div id="info" class="container tab-pane active"><br>
+                            <h3>{{$listing['name']}}</h3>
+                            <p>{{$listing['description']}}</p>
+                            <p>Price/month: {{$listing['price']}} €</p>
+                        </div>
+                        <div id="basic" class="container tab-pane fade"><br>
+                            <div class="row">
+                                <div class="basic-lista">
+                                    <h3>Basic</h3>
+                                    <ul>
+                                        <li>Floor: {{$listing['floor']}}</li>
+                                        <li>Bedrooms: {{$listing['bedrooms']}}</li>
+                                        <li>Bathrooms: {{$listing['bathrooms']}}</li>
+                                        <li>Inside size: {{$listing['insidesize']}} m2</li>
+                                        <li>Outside size: {{$listing['outsidesize']}} m2</li>
+                                    </ul>
+                                </div>
+                                <div class="basic-lista">
+                                    <h3>Expenses</h3>
+                                    <ul>
+                                        @foreach($listing['expences'] as $expence)
+                                        <li>{{$expence}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                <div class="basic-lista">
+                                    <h3>Additional:</h3>
+                                    <ul>
+                                        @foreach($listing['additionalinfo'] as $additional)
+                                        <li>{{$additional}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
-                            <div id="basic" class="container tab-pane fade"><br>
-                                <div class="row">
-                                    <div class="basic-lista">
-                                        <h3>Basic</h3>
-                                        <ul>
-                                            <li>Floor: {{$listing['floor']}}</li>
-                                            <li>Bedrooms: {{$listing['bedrooms']}}</li>
-                                            <li>Bathrooms: {{$listing['bathrooms']}}</li>
-                                            <li>Inside size: {{$listing['insidesize']}} m2</li>
-                                            <li>Outside size: {{$listing['outsidesize']}} m2</li>
-                                        </ul>
+                        </div>
+                        <div id="map" class="container tab-pane fade"><br>
+                            <h3>Location</h3>
+                            <div class="row">
+
+                                <div class="md-6 filter">
+                                    <input type="checkbox" name="mapfilter[]" value="Restaurant" class="hidden" id="cbm"><label for="cbm">Restaurant</label>
+                                    <input type="checkbox" name="mapfilter[]" value="Groceries" class="hidden" id="cbm1"><label for="cbm1">Groceries</label>
+                                    <input type="checkbox" name="mapfilter[]" value="Nightlife" class="hidden" id="cbm2"><label for="cbm2">Nightlife</label>
+                                    <input type="checkbox" name="mapfilter[]" value="Cafes" class="hidden" id="cbm3"><label for="cbm3">Cafes</label>
+                                    <input type="checkbox" name="mapfilter[]" value="Gym" class="hidden" id="cbm4"><label for="cbm4">Gym</label>
+                                    <input type="checkbox" name="mapfilter[]" value="Shopping" class="hidden" id="cbm5"><label for="cbm5">Shopping</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="available" class="container tab-pane fade"><br>
+                            <h3>Available</h3>
+
+
+                            <div class="calendar">
+
+                                <div class='ime-mjeseca'>
+
+                                    <h2>September</h2>
+
+                                    <a class="btn-prev " href="#"><i class="fas fa-arrow-left"></i></a>
+                                    <a class="btn-next " href="#"><i class="fas fa-arrow-right"></i></a>
+
+                                </div>
+
+                                <table>
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <td>Mo</td>
+                                            <td>Tu</td>
+                                            <td>We</td>
+                                            <td>Th</td>
+                                            <td>Fr</td>
+                                            <td>Sa</td>
+                                            <td>Su</td>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="prev-month">26</td>
+                                            <td class="prev-month">27</td>
+                                            <td class="prev-month">28</td>
+                                            <td class="prev-month">29</td>
+                                            <td class="prev-month">30</td>
+                                            <td class="prev-month">31</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td class="next-month">1</td>
+                                            <td class="next-month">2</td>
+                                            <td class="next-month">3</td>
+                                            <td class="next-month">4</td>
+                                            <td class="next-month">5</td>
+                                            <td class="next-month">6</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+
+                        </div>
+                        <div id="reviews" class="container tab-pane fade"><br>
+
+                            <h3>Write your review:</h3>
+                            <div class="row rev">
+                                <div class="col-md-6">
+                                    <div class="form-group blue-border">
+                                        <textarea class="form-control" id="Textarea" rows="5"></textarea>
                                     </div>
-                                    <div class="basic-lista">
-                                        <h3>Expenses</h3>
-                                        <ul>
-                                            @foreach($listing['expences'] as $expence)
-                                            <li>{{$expence}}</li>
-                                            @endforeach
-                                        </ul>
+                                    <div class="rating2">
+                                        <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
                                     </div>
-                                    <div class="basic-lista">
-                                        <h3>Additional:</h3>
-                                        <ul>
-                                            @foreach($listing['additionalinfo'] as $additional)
-                                            <li>{{$additional}}</li>
-                                            @endforeach
-                                        </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="col-md-12 review-box">
+                                        <div class="profili"><img src="/img/cura.jpg" alt="cura">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus iste nesciunt ad vitae commodi, voluptatibus velit id voluptas itaque provident aliquid.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div id="map" class="container tab-pane fade"><br>
-                                <h3>Location</h3>
-                                <div class="row">
-                                    
-                                    <div class="md-6 filter">
-                                        <input type="checkbox" name="mapfilter[]" value="Restaurant" class="hidden" id="cbm"><label for="cbm">Restaurant</label>
-                                        <input type="checkbox" name="mapfilter[]" value="Groceries" class="hidden" id="cbm1"><label for="cbm1">Groceries</label>
-                                        <input type="checkbox" name="mapfilter[]" value="Nightlife" class="hidden" id="cbm2"><label for="cbm2">Nightlife</label>
-                                        <input type="checkbox" name="mapfilter[]" value="Cafes" class="hidden" id="cbm3"><label for="cbm3">Cafes</label>
-                                        <input type="checkbox" name="mapfilter[]" value="Gym" class="hidden" id="cbm4"><label for="cbm4">Gym</label>
-                                        <input type="checkbox" name="mapfilter[]" value="Shopping" class="hidden" id="cbm5"><label for="cbm5">Shopping</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="available" class="container tab-pane fade"><br>
-                                <h3>Available</h3>
-                                
 
-                                    <div class="calendar">
-
-                                        <div class='ime-mjeseca'>
-                                        
-                                            <h2>September</h2>
-
-                                            <a class="btn-prev " href="#"><i class="fas fa-arrow-left"></i></a>
-                                            <a class="btn-next " href="#"><i class="fas fa-arrow-right"></i></a>
-
-                                        </div>
-
-                                        <table>
-
-                                            <thead>
-
-                                                <tr>
-
-                                                    <td>Mo</td>
-                                                    <td>Tu</td>
-                                                    <td>We</td>
-                                                    <td>Th</td>
-                                                    <td>Fr</td>
-                                                    <td>Sa</td>
-                                                    <td>Su</td>
-
-                                                </tr>
-
-                                            </thead>
-
-                                            <tbody>
-
-                                                <tr>
-                                                    <td class="prev-month">26</td>
-                                                    <td class="prev-month">27</td>
-                                                    <td class="prev-month">28</td>
-                                                    <td class="prev-month">29</td>
-                                                    <td class="prev-month">30</td>
-                                                    <td class="prev-month">31</td>
-                                                    <td>1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>3</td>
-                                                    <td>4</td>
-                                                    <td>5</td>
-                                                    <td>6</td>
-                                                    <td>7</td>
-                                                    <td>8</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>9</td>
-                                                    <td >10</td>
-                                                    <td>11</td>
-                                                    <td>12</td>
-                                                    <td>13</td>
-                                                    <td>14</td>
-                                                    <td>15</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>16</td>
-                                                    <td>17</td>
-                                                    <td>18</td>
-                                                    <td>19</td>
-                                                    <td>20</td>
-                                                    <td >21</td>
-                                                    <td>22</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td >23</td>
-                                                    <td>24</td>
-                                                    <td>25</td>
-                                                    <td>26</td>
-                                                    <td>27</td>
-                                                    <td>28</td>
-                                                    <td>29</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>30</td>
-                                                    <td class="next-month">1</td>
-                                                    <td class="next-month">2</td>
-                                                    <td class="next-month">3</td>
-                                                    <td class="next-month">4</td>
-                                                    <td class="next-month">5</td>
-                                                    <td class="next-month">6</td>
-                                                </tr>
-
-                                            </tbody>
-
-                                        </table>
-
-                                    </div> 
-
-                                
-                            </div>
-                            <div id="reviews" class="container tab-pane fade"><br>
-
-                                <h3>Write your review:</h3>
-                                <div class="row rev">
-                                    <div class="col-md-6">
-                                        <div class="form-group blue-border">
-                                            <textarea class="form-control" id="Textarea" rows="5"></textarea>
-                                        </div>
-                                        <div class="rating2">
-                                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="col-md-12 review-box">
-                                            <div class="profili"><img src="/img/cura.jpg" alt="cura">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus iste nesciunt ad vitae commodi, voluptatibus velit id voluptas itaque provident aliquid.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </div>
+    </div>
 
-    <!--dodala div za kartu-->
+   
 
-    <div class="container">
+    <div class="container-fluid px-0">
         <h2>Explore the Area</h2>
         <div id="viewDiv2" class="karta2">
         </div>
