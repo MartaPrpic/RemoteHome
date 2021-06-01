@@ -96,7 +96,7 @@
         <div>
             <h5 class="p-1 border-bottom">Filter By</h5>
             <p><label for="amount">Price range:</label>
-                <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
+                <input type="text" id="amount" style="border:0; color:#ff6248; font-weight:bold;">
             </p>
             <div id="slider-range"></div>
 
@@ -155,10 +155,10 @@
     </div>
 
     <section class="smjestaji">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 @foreach($listings as $listing)
-                <div class="col-md-4" name="oglas" id="{{$listing['category']}}">
+                <div class="col-md-3" name="oglas" id="{{$listing['category']}}">
                     <div class="smjestaj-box" id="{{$listing['type']}}">
                         <a href="detail/{{$listing['id']}}">
                             <div class="smjestaj-img">
@@ -187,7 +187,7 @@
                                         <form action="/favourite" method="POST" style="display:inline">
                                             @csrf
                                             <input type="hidden" name="listing_id" value={{$listing['id']}}>
-                                            <button type="submit" class="btn"><i class="far fa-heart"></i></button>
+                                            <button type="submit" class="btn-heart "><i class="far fa-heart"></i><i class="fas fa-heart"></i></button>
                                         </form>
                                     </div>
                                 </div>
