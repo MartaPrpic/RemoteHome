@@ -153,16 +153,16 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="checkbox" name="cbk" id="Slavonija and Baranja"><label for="Slavonija and Baranja"><img class="food" src="/img/čobi.jpg"></label>
+                                <input type="checkbox" class="hidden" name="cbk" id="Slavonija and Baranja"><label for="Slavonija and Baranja"><img class="food" src="/img/čobi.jpg"></label>
                             </div>
                             <div class="col-md-6">
-                                <input type="checkbox" name="cbk" id="Dalmatia"><label for="Dalmatia"><img class="food" src="/img/riba.jpg"></label>
+                                <input type="checkbox" class="hidden" name="cbk" id="Dalmatia"><label for="Dalmatia"><img class="food" src="/img/riba.jpg"></label>
                             </div>
                             <div class="col-md-6">
-                                <input type="checkbox" name="cbk" id="Lika and Gorski kotar"><label for="Lika and Gorski kotar"><img class="food" src="/img/grah.jpg"></label>
+                                <input type="checkbox" class="hidden" name="cbk" id="Lika and Gorski kotar"><label for="Lika and Gorski kotar"><img class="food" src="/img/grah.jpg"></label>
                             </div>
                             <div class="col-md-6">
-                                <input type="checkbox" name="cbk" id="Central part"><label for="Central part"><img class="food" src="/img/purica.jpg"></label>
+                                <input type="checkbox" class="hidden" name="cbk" id="Central part"><label for="Central part"><img class="food" src="/img/purica.jpg"></label>
                             </div>
                         </div>
                     </div>
