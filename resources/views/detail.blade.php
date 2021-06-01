@@ -101,18 +101,18 @@
             -->
 
         <div class="about-room">
-            <!--
-                    <div>
+            
+                <div>
                     <div id="demo" class="carousel slide" data-ride="carousel">
 
-                         --Indicators--
+                        <!-- Indicators -->
                         <ul class="carousel-indicators">
                             <li data-target="#demo" data-slide-to="0" class="active"></li>
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
                         </ul>
 
-                         --The slideshow --
+                        <!-- The slideshow -->
                         <div class="carousel-inner">
                             @foreach(json_decode($listing['images']) as $image)
                             <div class="carousel-item {{$image == head(json_decode($listing['images'])) ? 'active' : ''}}">
@@ -121,7 +121,7 @@
                             @endforeach
                         </div>
 
-                        -- Left and right controls --
+                        <!-- Left and right controls -->
                         <a class="carousel-control-prev" href="#demo" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
@@ -131,8 +131,8 @@
 
                     </div>
                 </div>
-                -->
-
+        </div>  
+<!--
             <div class="container-fluid">
                 <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="12000">
                     <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
@@ -165,7 +165,7 @@
                     </a>
                 </div>
             </div>
-
+                    -->
             <div about-room>
                 <div class="btn-container">
                     <ul class="nav nav-tabs nav-room" role="tablist" style="flex-wrap: nowrap">
