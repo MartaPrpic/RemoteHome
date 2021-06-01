@@ -155,10 +155,10 @@
     </div>
 
     <section class="smjestaji">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 @foreach($listings as $listing)
-                <div class="col-md-4" name="oglas" id="{{$listing['category']}}">
+                <div class="col-md-3" name="oglas" id="{{$listing['category']}}">
                     <div class="smjestaj-box" id="{{$listing['type']}}">
                         <a href="detail/{{$listing['id']}}">
                             <div class="smjestaj-img">
