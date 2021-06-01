@@ -1,5 +1,6 @@
 @extends('master')
 @section("content")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <div class="header">
     <nav class="navbar navbar-expand-sm sticky-top">
 
@@ -56,6 +57,7 @@
 <section class="room">
     <script type="text/javascript">
         var oglas = "<?php echo $listing['address'] ?>";
+        baguetteBox.run('.tz-gallery');
     </script>
 
     <div class="container-fluid room-container">
@@ -98,21 +100,19 @@
                     @endif
                 </div>
             </div>
-            -->
+            
 
         <div class="about-room">
             
                 <div>
                     <div id="demo" class="carousel slide" data-ride="carousel">
 
-                        <!-- Indicators -->
                         <ul class="carousel-indicators">
                             <li data-target="#demo" data-slide-to="0" class="active"></li>
                             <li data-target="#demo" data-slide-to="1"></li>
                             <li data-target="#demo" data-slide-to="2"></li>
                         </ul>
 
-                        <!-- The slideshow -->
                         <div class="carousel-inner">
                             @foreach(json_decode($listing['images']) as $image)
                             <div class="carousel-item {{$image == head(json_decode($listing['images'])) ? 'active' : ''}}">
@@ -121,7 +121,6 @@
                             @endforeach
                         </div>
 
-                        <!-- Left and right controls -->
                         <a class="carousel-control-prev" href="#demo" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
@@ -131,41 +130,63 @@
 
                     </div>
                 </div>
-        </div>  
-<!--
-            <div class="container-fluid">
-                <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="12000">
-                    <div class="carousel-inner row w-100 mx-auto flex-nowrap" role="listbox">
-                        <div class="carousel-item col-md-3 active">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400/000/fff?text=1" alt="slide 1">
-                        </div>
-                        <div class="carousel-item col-md-3">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=2" alt="slide 2">
-                        </div>
-                        <div class="carousel-item col-md-3">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=3" alt="slide 3">
-                        </div>
-                        <div class="carousel-item col-md-3">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=4" alt="slide 4">
-                        </div>
-                        <div class="carousel-item col-md-3">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=5" alt="slide 5">
-                        </div>
-                        <div class="carousel-item col-md-3">
-                            <img class="img-fluid mx-auto d-block" src="//via.placeholder.com/600x400?text=6" alt="slide 6">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                        <i class="fa fa-chevron-left fa-lg text-muted"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-                        <i class="fa fa-chevron-right fa-lg text-muted"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
+        </div> 
+
+<div class="top-content">
+    <div class="container-fluid">
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3 active">
+                    <img src="assets/img/backgrounds/1.jpg" class="img-fluid mx-auto d-block" alt="img1">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/2.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/3.jpg" class="img-fluid mx-auto d-block" alt="img3">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/4.jpg" class="img-fluid mx-auto d-block" alt="img4">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/5.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/6.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/7.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                </div>
+                <div class="carousel-item col-6 col-sm-6 col-md-4 col-lg-3">
+                    <img src="assets/img/backgrounds/8.jpg" class="img-fluid mx-auto d-block" alt="img8">
                 </div>
             </div>
-                    -->
+            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</div>-->
+
+<div class="tz-gallery">
+
+        <div class="row">
+            @foreach(json_decode($listing['images']) as $image)
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="{{'/images/' . $image}}">
+                        <img style="object-fit:cover; height:350px;" src="{{'/images/' . $image}}" alt="Bridge">
+                    </a>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+
             <div about-room>
                 <div class="btn-container">
                     <ul class="nav nav-tabs nav-room" role="tablist" style="flex-wrap: nowrap">
@@ -179,7 +200,7 @@
                             <a class="nav-link" data-toggle="tab" href="#map">Map</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#available">Available</a>
+                            <a class="nav-link" data-toggle="tab" href="#available">Request rental</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#reviews">Reviews</a>
@@ -238,10 +259,50 @@
                             </div>
                         </div>
                         <div id="available" class="container tab-pane fade"><br>
-                            <h3>Available</h3>
+                            <div class="row">
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-plan-basic">
+            <div class="card-body">
+              <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
+              <p class="pricing-plan-title">Basic</p>
+              <h3 class="pricing-plan-cost ml-auto">$3</h3>
+              <ul class="pricing-plan-features">
+                <li>5 rental requests</li>
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-card-highlighted  pricing-plan-pro">
+            <div class="card-body">
+                <i class="mdi mdi-trophy pricing-plan-icon"></i>
+              <p class="pricing-plan-title">Regular</p>
+              <h3 class="pricing-plan-cost ml-auto">$5</h3>
+              <ul class="pricing-plan-features">
+                <li>10 rental requests</li>
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-plan-enterprise">
+            <div class="card-body">
+              <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
+              <p class="pricing-plan-title">Pro</p>
+              <h3 class="pricing-plan-cost ml-auto">$7</h3>
+              <ul class="pricing-plan-features">
+                <li>Unlimited rental requests</li>
+              </ul>
+              <a href="#!" class="btn pricing-plan-purchase-btn">Purchase</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-                            <div class="calendar">
+                           <!-- <div class="calendar">
 
                                 <div class='ime-mjeseca'>
 
@@ -332,7 +393,7 @@
 
                                 </table>
 
-                            </div>
+                            </div>-->
 
 
                         </div>

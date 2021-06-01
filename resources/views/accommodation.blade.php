@@ -23,13 +23,13 @@
                         <li class="nav-item dropdown nav-element">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 
-                                Currency
+                                Meet Up
                             </a>
-                            <div class="dropdown-menu">
+                            <!--<div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">EURO <i class="fas fa-euro-sign"></i></a>
                                 <a class="dropdown-item" href="#">USD <i class="fas fa-dollar-sign"></i></a>
                                 <a class="dropdown-item" href="#">HRK</a>
-                            </div>
+                            </div>-->
                         </li>
                         <li class="nav-item dropdown nav-element">
                             <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
@@ -201,7 +201,7 @@
     </section>
 
     <section class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 footer-link">
                     <h6>About</h6>
