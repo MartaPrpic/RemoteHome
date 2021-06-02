@@ -36,9 +36,9 @@
                         
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="/favourites">Favourites</a>
-                                <a class="dropdown-item" href="/list">Host your property</a>
-                                <a class="dropdown-item" href="/logout">Log out</a>
+                            <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
                         </div>
                         @else
                         <div class="dropdown-menu dropdown-menu-right">
@@ -65,7 +65,7 @@
     <div id="hello" class="row">
             <div class="col-md-6 kviz-pocetna">
                 <h3>Find out what region of Croatia suits you !</h3>
-                <a href="/quiz"><button id="quiz-btn">Take a quiz</button></a>
+                <a href="/quiz"><button class="mybutton" id="quiz-btn">Take a quiz</button></a>
             </div>
             <div class="col-md-6 kviz-pocetna">
                 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

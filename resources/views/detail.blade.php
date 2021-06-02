@@ -1,6 +1,16 @@
 @extends('master')
 @section("content")
-<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<head>
+    <style>
+        .item{
+            transition: .5s ease-in-out;
+            padding:0px !important;
+        }
+        .item:hover{
+            filter:brightness(80%);
+        }
+    </style>
+</head>
 <div class="header">
     <nav class="navbar navbar-expand-sm sticky-top">
 
@@ -37,9 +47,9 @@
 
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/favourites">Favourites</a>
-                            <a class="dropdown-item" href="/list">Host your property</a>
-                            <a class="dropdown-item" href="/logout">Log out</a>
+                            <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
                         </div>
                         @else
                         <div class="dropdown-menu dropdown-menu-right">
@@ -173,19 +183,19 @@
     </div>
 </div>-->
 
-<div class="tz-gallery">
-
-        <div class="row">
-            @foreach(json_decode($listing['images']) as $image)
-                <div class="col-sm-12 col-md-4">
-                    <a class="lightbox" href="{{'/images/' . $image}}">
-                        <img style="object-fit:cover; height:350px;" src="{{'/images/' . $image}}" alt="Bridge">
-                    </a>
-                </div>
-            @endforeach
+<div class="container-fluid" style="padding:0px !important;">
+    
+    <div class="row">
+    @foreach(json_decode($listing['images']) as $image)
+        <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="{{'/images/' . $image}}" class="fancybox" data-fancybox="gallery1">
+                <img src="{{'/images/' . $image}}" width="100%" height="100%">
+            </a>
         </div>
-
+    @endforeach
     </div>
+</div>
+
 
             <div about-room>
                 <div class="btn-container">
@@ -217,7 +227,7 @@
                         <div id="basic" class="container tab-pane fade"><br>
                             <div class="row">
                                 <div class="basic-lista">
-                                    <h3>Basic</h3>
+                                    <h3>Basic infomation</h3>
                                     <ul>
                                         <li>Floor: {{$listing['floor']}}</li>
                                         <li>Bedrooms: {{$listing['bedrooms']}}</li>
@@ -245,7 +255,7 @@
                             </div>
                         </div>
                         <div id="map" class="container tab-pane fade"><br>
-                            <h3>Location</h3>
+                            <h3></h3>
                             <div class="row">
 
                                 <div class="md-6 filter">
@@ -265,7 +275,7 @@
             <div class="card-body">
               <i class="mdi mdi-cube-outline pricing-plan-icon"></i>
               <p class="pricing-plan-title">Basic</p>
-              <h3 class="pricing-plan-cost ml-auto">$3</h3>
+              <h4 class="pricing-plan-cost ml-auto">$3</h3>
               <ul class="pricing-plan-features">
                 <li>5 rental requests</li>
               </ul>
@@ -278,7 +288,7 @@
             <div class="card-body">
                 <i class="mdi mdi-trophy pricing-plan-icon"></i>
               <p class="pricing-plan-title">Regular</p>
-              <h3 class="pricing-plan-cost ml-auto">$5</h3>
+              <h4 class="pricing-plan-cost ml-auto">$5</h3>
               <ul class="pricing-plan-features">
                 <li>10 rental requests</li>
               </ul>
@@ -291,7 +301,7 @@
             <div class="card-body">
               <i class="mdi mdi-wallet-giftcard pricing-plan-icon"></i>
               <p class="pricing-plan-title">Pro</p>
-              <h3 class="pricing-plan-cost ml-auto">$7</h3>
+              <h4 class="pricing-plan-cost ml-auto">$7</h3>
               <ul class="pricing-plan-features">
                 <li>Unlimited rental requests</li>
               </ul>
@@ -402,15 +412,20 @@
                             <h3>Write your review:</h3>
                             <div class="row rev">
                                 <div class="col-md-6">
-                                    <div class="form-group blue-border">
+                                    <div class=" row form-group blue-border">
                                         <textarea class="form-control" id="Textarea" rows="5"></textarea>
                                     </div>
-                                    <div class="rating2">
-                                        <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"><i class="fas fa-star"></i></label>
-                                        <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
+                                    <div class="row">
+                                        <div class="rating2 col-md-6">
+                                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"><i class="fas fa-star"></i></label>
+                                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:10px;">
+                                            <input type="button" class="mybutton" style="display:block" value="Submit"></input>        
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -439,7 +454,7 @@
    
 
     <div class="container-fluid px-0">
-        <h2>Explore the Area</h2>
+        <h2 style="text-transform: uppercase; font-weight:bold;">Explore the Area</h2>
         <div id="viewDiv2" class="karta2">
         </div>
     </div>

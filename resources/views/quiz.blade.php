@@ -45,9 +45,9 @@
                         
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="/favourites">Favourites</a>
-                                <a class="dropdown-item" href="/list">Host your property</a>
-                                <a class="dropdown-item" href="/logout">Log out</a>
+                            <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
                         </div>
                         @else
                         <div class="dropdown-menu dropdown-menu-right">
@@ -78,7 +78,7 @@
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c8" class="hidden"><label for="c8">Student life</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c7" class="hidden"><label for="c7">City lifestyle</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c9" class="hidden"><label for="c9">Beautiful nature</label></div>
-                        <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c10" class="hidden"><label for="c10">Beautiful beaches</label></div>
+                        <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c10" class="hidden"><label for="c10">Beaches</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c11" class="hidden"><label for="c11">Beautiful parks</label></div>
                         <div class="col-sm-2 interes"><input type="checkbox" name="interest" id="c12" class="hidden"><label for="c12">Peacefull living</label></div>
                     </div>
@@ -169,16 +169,39 @@
                 </div>          
             </div>
             <!--class smjer-->
-            <div id="nav-btns" class="smjer">
+            <div id="nav-btns" style="text-align:center !impotrant;">
                 <!--<a href="" id="back"><i class="fas fa-caret-left"></i> back</a>
                 <a href="" id="skip">skip <i class="fas fa-forward"></i></a>
                 <a href="" id="next">next <i class="fas fa-caret-right"></i></a>-->
-                <a href="" id="finish">Finish</a>
-            </div>
-            <div id="result" class="rezultat">
+                <input type="button" class="mybutton" value="Finish" id="finish"></input>
             </div>
         </div>
     </div>
+    <div class="display:flex; height:100vh;">
+        <div class="rezultat">
+            <h3>Your suited region would be: </h3>
+            <p id="ime">IME</p>
+            <a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a>
+            <p class="quiz-call">Not sure yet and want to get to know it better?</p>
+            <a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="quiz-button btn btn-outline">Click here</button></a><br>
+        </div>
+        
+        <div class="karta" style="display:inline;" id="viewDiv">
+        </div>
+    </div>
+
+    <div style="display:none;" id="rezultat" class="rezultat">
+                <div class="row" style="100vh !important;">
+                    <div id="result" class="col-lg-6">
+                        <h3>Your suited region would be: </h3>
+                        <p id="ime">IME</p>
+                        <a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a>
+                        <p class="quiz-call">Not sure yet and want to get to know it better?</p>
+                        <a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="quiz-button btn btn-outline">Click here</button></a><br>
+                    </div>
+                    <div id="viewDiv" height="100vh;" class="col-lg-6"></div>
+                </div>
+            </div>
 
 
     <section class="footer">
@@ -403,10 +426,11 @@
                 regije.sort(function(regijaA, regijaB) {
                     return regijaB.points - regijaA.points
                 });
+                document.getElementById("rezultat").style="display:block;"
                 let result = [];
                 let maxPoints = regije[0].points;
                 result = regije.filter(regija => regija.points == maxPoints);
-                document.getElementById("result").innerHTML =`<h3>Your suited region would be: </h3> ${result[0].ime} <br><a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a><p class="quiz-call">Not sure yet and want to get to know it better?</p><a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="quiz-button btn btn-outline">Click here</button></a><br>`};
+            };
 
             getResult();
 
