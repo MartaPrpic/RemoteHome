@@ -48,11 +48,11 @@ body {
   line-height: 1;
   margin-bottom: 24px; }
   .pricing-plan-basic .pricing-plan-icon {
-    color: #fe397a; }
+    color: rgb(0, 219, 219); }
   .pricing-plan-pro .pricing-plan-icon {
-    color: #10bb87; }
+    color: #ff6248; }
   .pricing-plan-enterprise .pricing-plan-icon {
-    color: #5d78ff; }
+    color: rgb(0, 219, 219); }
 
 .pricing-plan-features {
   list-style: none;
@@ -81,28 +81,28 @@ body {
   -webkit-box-pack: center;
           justify-content: center; }
   .pricing-plan-basic .pricing-plan-purchase-btn {
-    background-color: #fe397a;
+    background-color: rgb(0, 219, 219);
     color: #fff; }
     .pricing-plan-basic .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #b7013d; }
+      box-shadow: 0 3px 0 0 rgb(11, 161, 161); }
     .pricing-plan-basic .pricing-plan-purchase-btn:active {
       -webkit-transform: translateY(3px);
               transform: translateY(3px);
       box-shadow: none; }
   .pricing-plan-pro .pricing-plan-purchase-btn {
-    background-color: #10bb87;
+    background-color: #ff6248;
     color: #fff; }
     .pricing-plan-pro .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #0a7554; }
+      box-shadow: 0 3px 0 0 #d22e11; }
     .pricing-plan-pro .pricing-plan-purchase-btn:active {
       -webkit-transform: translateY(3px);
               transform: translateY(3px);
       box-shadow: none; }
   .pricing-plan-enterprise .pricing-plan-purchase-btn {
-    background-color: #5d78ff;
+    background-color: rgb(0, 219, 219);
     color: #fff; }
     .pricing-plan-enterprise .pricing-plan-purchase-btn:hover {
-      box-shadow: 0 3px 0 0 #1138ff; }
+      box-shadow: 0 3px 0 0 rgb(11, 161, 161); }
     .pricing-plan-enterprise .pricing-plan-purchase-btn:active {
       -webkit-transform: translateY(3px);
               transform: translateY(3px);

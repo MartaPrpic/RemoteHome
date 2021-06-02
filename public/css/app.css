@@ -11,14 +11,14 @@
 }
 
 .navbar-brand img {
-    width: 60px;
-    height: 65px;
+    height: 50px;
     margin-left: 20px;
 }
 
 .navbar {
     color: #fff;
     background-color: rgb(0, 219, 219);
+    height:70px;
 }
 
 .nav-link {
@@ -30,7 +30,7 @@
 }
 
 .navbar-nav {
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
     font-size: large;
 }
@@ -586,10 +586,10 @@ input[type=checkbox]+label {
     text-transform: capitalize;
     padding: 5px 20px;
     text-align: center;
-    border: 1px solid rgb(0, 219, 219);
+    border: 1px solid;
     border-radius: 10px;
     margin-bottom: 5px;
-    color: rgb(0, 219, 219);
+    color:#c2c6c6;
     background-color: white;
 }
 
@@ -920,7 +920,7 @@ input[type=radio]:checked+label {
 }
 
 .room {
-    padding: 50px 0;
+    /*padding: 50px 0;*/
     padding-bottom: 100px;
 }
 
@@ -989,7 +989,7 @@ input[type=radio]:checked+label {
 
 .btn-container {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .btn-container a {
@@ -1282,7 +1282,7 @@ table {
     padding-bottom: 30px;
 }
 
-.kviz-pocetna button {
+.mybutton {
     background-color: rgb(0, 219, 219);
     color: #fff;
     border-radius: 10px;
@@ -1291,7 +1291,7 @@ table {
     font-size: 20px;
 }
 
-.kviz-pocetna button:hover {
+.mybutton:hover {
     background-color: #ff6248;
     color: #fff;
 }
@@ -1399,20 +1399,12 @@ table {
     padding: 10px;
     font-size: 18px;
 }
-
-.rezultat {
-    color: rgb(0, 219, 219);
-    font-size: 30px;
-    text-align: center;
-    margin: 300px 0px;
-    /*border:1px solid rgb(0, 219, 219);
-    border-radius: 10px;
-    width: auto;
-    padding:20px;*/
+.rezultat{
+    width: 50%;
 }
 
-.rezultat p {
-    font-size: 22px;
+.karta{
+    width: 50%;
 }
 
 
@@ -1732,7 +1724,7 @@ table {
         font-size: 20px;
     }
     .btn-container {
-        margin-top: 30px;
+        margin-top: 80px;
     }
     .basic-lista ul {
         justify-content: center;
@@ -1746,8 +1738,13 @@ table {
         color: rgb(0, 50, 83);
         text-decoration: none;
     }
+    .tab-content div h3{
+        color:#ff6248;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
     .tab-content {
-        padding-bottom: 30px;
+        padding: 40px;
     }
     .back {
         padding: 10px 20px;
