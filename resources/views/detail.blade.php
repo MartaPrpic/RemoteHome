@@ -423,7 +423,7 @@
                                             <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"><i class="fas fa-star"></i></label>
                                             <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
                                         </div>
-                                        <div class="col-md-6" style="padding-top:10px;">
+                                        <div class="col-md-6" style="padding:10px 0px;">
                                             <input type="button" class="mybutton" style="display:block" value="Submit"></input>        
                                         </div>
                                     </div>
