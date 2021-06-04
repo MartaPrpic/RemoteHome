@@ -44,17 +44,16 @@
                         <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="fas fa-user-circle"></i>
                         </a>
-
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
-                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #ff6248; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #ff6248; padding-right:11px"></i>Log out</a>
                         </div>
                         @else
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/login">Login</a>
-                            <a class="dropdown-item" href="/register">Sign up</a>
+                        <a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt" style="color: #ff6248; padding-right:11px"></i>Login</a>
+                            <a class="dropdown-item" href="/register"><i class="fas fa-user-plus" style="color: #ff6248; padding-right:11px"></i>Sign up</a>
                         </div>
                         @endif
                     </li>
@@ -424,7 +423,7 @@
                                             <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"><i class="fas fa-star"></i></label>
                                         </div>
                                         <div class="col-md-6" style="padding:10px 0px;">
-                                            <input type="button" class="mybutton" style="display:block" value="Submit"></input>        
+                                            <input type="button" id="reviewButton" class="mybutton" style="display:block" value="Submit"></input>        
                                         </div>
                                     </div>
                                 </div>

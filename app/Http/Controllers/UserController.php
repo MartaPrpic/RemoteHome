@@ -41,7 +41,7 @@ class UserController extends Controller
 
     public function handleProviderCallback(Request $req)
     {
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver('google')->stateless()->user();
 
         // Find User
         $authUser = User::where('email', $user->email)->first();

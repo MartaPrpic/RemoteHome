@@ -36,17 +36,17 @@
                                 <i class="fas fa-user-circle"></i>
                             </a>
                             @if(Session::has('user'))
-                            <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
-                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #ff6248; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #ff6248; padding-right:11px"></i>Log out</a>
                         </div>
-                            @else
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="/login">Login</a>
-                                <a class="dropdown-item" href="/register">Sign up</a>
-                            </div>
-                            @endif
+                        @else
+                        <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt" style="color: #ff6248; padding-right:11px"></i>Login</a>
+                            <a class="dropdown-item" href="/register"><i class="fas fa-user-plus" style="color: #ff6248; padding-right:11px"></i>Sign up</a>
+                        </div>
+                        @endif
                         </li>
                     </ul>
                 </div>

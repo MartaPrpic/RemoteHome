@@ -10,6 +10,7 @@ import Map from "https://js.arcgis.com/4.19/@arcgis/core/Map.js";
 
   let viewDiv= document.getElementById("viewDiv");
   let viewDiv2 = document.getElementById("viewDiv2");
+  let viewDiv3 = document.getElementById("viewDiv3");
   if(viewDiv){function createPoint(lat, lng){
   let point = new Point({
   latitude: lat,
@@ -323,4 +324,20 @@ import Map from "https://js.arcgis.com/4.19/@arcgis/core/Map.js";
   map.layers.add(layer);
 
 
+  }else if(viewDiv3){
+    console.log("Hello");
+    const map = new Map({
+
+      basemap: "topo-vector"
+    
+      });
+    
+      const view = new MapView({
+    
+      container: "viewDiv3",
+      center: [15.2000, 45.1000 ],
+      zoom: 7,
+      map: map
+    
+      });
   }

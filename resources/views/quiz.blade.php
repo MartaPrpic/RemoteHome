@@ -46,13 +46,13 @@
                         @if(Session::has('user'))
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="/favourites"><i class="fas fa-heart 2x" style="color: #ff6248; padding-right:11px;"></i>Favourites</a>
-                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #78d52e; padding-right:11px;"></i>Host your property</a>
-                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #8643e5; padding-right:11px"></i>Log out</a>
+                            <a class="dropdown-item" href="/list"><i class="fas fa-address-card" style="color: #ff6248; padding-right:11px;"></i>Host your property</a>
+                            <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt" style="color: #ff6248; padding-right:11px"></i>Log out</a>
                         </div>
                         @else
                         <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="/login">Login</a>
-                            <a class="dropdown-item" href="/register">Sign up</a>
+                        <a class="dropdown-item" href="/login"><i class="fas fa-sign-in-alt" style="color: #ff6248; padding-right:11px"></i>Login</a>
+                            <a class="dropdown-item" href="/register"><i class="fas fa-user-plus" style="color: #ff6248; padding-right:11px"></i>Sign up</a>
                         </div>
                         @endif
                     </li>
@@ -169,28 +169,30 @@
                 </div>          
             </div>
             <!--class smjer-->
-            <div id="nav-btns" style="text-align:center !impotrant;">
-                <!--<a href="" id="back"><i class="fas fa-caret-left"></i> back</a>
-                <a href="" id="skip">skip <i class="fas fa-forward"></i></a>
-                <a href="" id="next">next <i class="fas fa-caret-right"></i></a>-->
-                <input type="button" class="mybutton" value="Finish" id="finish"></input>
+            <div id="nav-btns" class="row">
+                <input type="button" style="margin:0 auto !important" class="mybutton" value="Finish" id="finish"></input>
             </div>
         </div>
     </div>
-    <div class="display:flex; height:100vh;">
-        <div class="rezultat">
-            <h3>Your suited region would be: </h3>
-            <p id="ime">IME</p>
-            <a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a>
-            <p class="quiz-call">Not sure yet and want to get to know it better?</p>
-            <a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="quiz-button btn btn-outline">Click here</button></a><br>
+    <div id="rezultat" style="display:none;">
+        <div class="quizKarta" id="viewDiv3">
         </div>
-        
-        <div class="karta" style="display:inline;" id="viewDiv">
+        <div class="rezultaat">
+            <div id="resultWrapper">
+                <h3>Your suited region would be: </h3>
+                <p id="ime"></p>
+                <a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a>    
+            </div>
+            <div id="redirect">
+                
+                <h4 class="quiz-call">Not sure yet and want to get to know it better?</h4>
+                <a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="mybutton">Click here</button></a><br>
+            
+            </div>
         </div>
     </div>
 
-    <div style="display:none;" id="rezultat" class="rezultat">
+    <!--<div style="display:none;" id="rezultat" class="rezultat">
                 <div class="row" style="100vh !important;">
                     <div id="result" class="col-lg-6">
                         <h3>Your suited region would be: </h3>
@@ -199,9 +201,9 @@
                         <p class="quiz-call">Not sure yet and want to get to know it better?</p>
                         <a href="https://croatia.hr/en-GB/Destinations/Regions" target="_blank" rel="noopener noreferrer"><button class="quiz-button btn btn-outline">Click here</button></a><br>
                     </div>
-                    <div id="viewDiv" height="100vh;" class="col-lg-6"></div>
+                    <div id="" height="100vh;" style="border:1 solid black;" class="col-lg-6"></div>
                 </div>
-            </div>
+            </div>-->
 
 
     <section class="footer">
@@ -310,6 +312,7 @@
         let sections = document.getElementById("sections");
         let finish = document.getElementById("finish");
         let buttons = document.getElementById("nav-btns");
+        let rezultat = document.getElementById("ime");
         let numOfSections = sections.childElementCount;
         let userInput = {
             summerTemp: null,
@@ -426,10 +429,12 @@
                 regije.sort(function(regijaA, regijaB) {
                     return regijaB.points - regijaA.points
                 });
-                document.getElementById("rezultat").style="display:block;"
+                document.getElementById("rezultat").style="display:flex;"
                 let result = [];
                 let maxPoints = regije[0].points;
                 result = regije.filter(regija => regija.points == maxPoints);
+                console.log(result[0]);
+                rezultat.innerHTML = result[0].ime;
             };
 
             getResult();
