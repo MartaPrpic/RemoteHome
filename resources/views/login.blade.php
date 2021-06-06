@@ -16,7 +16,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>-->
 
-<body style="background-image: linear-gradient(rgb(0, 195, 230), rgb(211, 237, 255));">
+<body style="background-image: linear-gradient(rgb(0, 219, 219), rgb(211, 237, 255));">
 
     <div class="container">
         <div class="label">
@@ -41,7 +41,7 @@
                 <input class="form-check-input" type="checkbox"> Remember me
               </label>
                     </div>
-                    <button type="submit" class="btn btn-info">Login</button>
+                    <button type="submit" class="mybutton">Login</button>
                 </form>
                 <div class="col-md-12 ">
                     <div class="login-or">

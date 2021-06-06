@@ -104,38 +104,64 @@ function console_log($output, $with_script_tags = true) {
         @endforeach
     </div>
 </section>
-    <section class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 footer-link">
-                    <h6>About Us</h6>
-                    <div>
-                        <a href="#"> Contact
-                    </a>
-                    </div>
+<section class="footer">
+        <div class="container-fluid">
+            <div class="row" style="justify-content:center; padding-left:250px !important">
+                <div class="col-md-3 footer-link">
+                    <h6>About</h6>
                     <div>
                         <a href="/accommodation">
-                        Accommodation
-                    </a>
+                            Accommodation
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/list">
+                            Host your property
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/quiz">
+                            Quiz
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/quiz">
+                            Get to know Croatian regions
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 footer-link" style="text-align:center !important;">
+                    <h6>Social media</h6>
+                    <p><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest-square"></i></p>
+                </div>
+                <div class="col-md-3 footer-link">
+                    <h6>Policies</h6>
+                    <div>
+                        <a href="#">
+                            Cookie policy
+                        </a>
                     </div>
                     <div>
                         <a href="#">
-                        Privacy Policy
-                    </a>
+                            Privacy policy
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            Advertising policy
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-4">
+            </div>
+            <hr>
+            <div class="row" style="justify-content:center;">
+                <div class="col-md-3">
                     <a class="footer-logo" href="/">
                         <img src="img/logo3.png" alt="Logo" style="width: 60px; height: 65px; ">
                     </a>
                     <p><i class="far fa-copyright" style="font-size: 15px;"></i> 2021 Remote Home</p>
                 </div>
-
-                <div class="col-md-4 ">
-                    <h6>Social media</h6>
-                    <p><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-pinterest-square"></i></p>
-                </div>
-            </div>
+            <div>
         </div>
     </section>
 @endsection

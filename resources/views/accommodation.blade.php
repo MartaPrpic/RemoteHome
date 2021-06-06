@@ -21,16 +21,16 @@
                             <a class="nav-link" href="/accommodation">Accommodation</a>
                         </li>
                         <li class="nav-item dropdown nav-element">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 
-                                Meet Up
-                            </a>
-                            <!--<div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">EURO <i class="fas fa-euro-sign"></i></a>
-                                <a class="dropdown-item" href="#">USD <i class="fas fa-dollar-sign"></i></a>
-                                <a class="dropdown-item" href="#">HRK</a>
-                            </div>-->
-                        </li>
+                            Currency
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">EURO <i class="fas fa-euro-sign"></i></a>
+                            <a class="dropdown-item" href="#">USD <i class="fas fa-dollar-sign"></i></a>
+                            <a class="dropdown-item" href="#">HRK</a>
+                        </div>
+                    </li>
                         <li class="nav-item dropdown nav-element">
                             <a class="nav-link dropdown-toggle  btn-login" type="button" href="#" id="navbardrop" data-toggle="dropdown">
                                 <i class="fas fa-user-circle"></i>
@@ -201,23 +201,23 @@
     </section>
 
     <section class="footer">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-4 footer-link">
-                    <h6>About</h6>
+                    <h6>About </h6>
                     <div>
                         <a href="#"> Trust & Safety
-                        </a>
+                    </a>
                     </div>
                     <div>
                         <a href="/accommodation">
-                            Accommodation
-                        </a>
+                        Accommodation
+                    </a>
                     </div>
                     <div>
                         <a href="#">
-                            Privacy Policy
-                        </a>
+                        Privacy Policy
+                    </a>
                     </div>
                 </div>
                 <div class="col-md-4">

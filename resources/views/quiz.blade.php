@@ -169,7 +169,7 @@
                 </div>          
             </div>
             <!--class smjer-->
-            <div id="nav-btns" class="row">
+            <div id="nav-btns" class="row" style="margin:100px auto 150px auto;">
                 <input type="button" style="margin:0 auto !important" class="mybutton" value="Finish" id="finish"></input>
             </div>
         </div>
@@ -179,8 +179,13 @@
         </div>
         <div class="rezultaat">
             <div id="resultWrapper">
-                <h3>Your suited region would be: </h3>
+                <h4>Your suited region would be: </h4>
                 <p id="ime"></p>
+                <div style="height:1px; background-color: rgba(241, 241, 241); width:80%; margin:0 auto;"></div>
+                <div>
+                    <p style="font-size: 22px !important; padding: 30px 60px; text-align: left !important; color: #b0b0b0;">Now when you've found your suited region you can start looking for the perfect accomodation</p>
+                    <h4 style="padding-top:0px !important; font-weight:bold;">Start your search here</h4>
+                </div>
                 <a href="/accommodation"><button class="quiz-acc">Search accommodation</button></a>    
             </div>
             <div id="redirect">
@@ -204,19 +209,17 @@
                     <div id="" height="100vh;" style="border:1 solid black;" class="col-lg-6"></div>
                 </div>
             </div>-->
-
-
-    <section class="footer">
+            <section class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 footer-link">
-                    <h6>About</h6>
+                    <h6>About </h6>
                     <div>
                         <a href="#"> Trust & Safety
                     </a>
                     </div>
                     <div>
-                        <a href="Accommodation.html">
+                        <a href="/accommodation">
                         Accommodation
                     </a>
                     </div>
